@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* Base animations */
 .animate-slide-in {
   opacity: 0;
@@ -217,4 +217,8 @@ section::before {
 .approach-buttons button:hover {
   background: #333;
   color: #fff;
+}
+
+.font-use{
+  font-family: 'Bebas Neue', sans-serif;
 }

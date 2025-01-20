@@ -5,9 +5,9 @@ import f1 from "./components/f-1.png"
 import f2 from "./components/f-2.png"
 import f3 from "./components/f-3.png"
 import insurance from "./components/FINANCIAL.jpg"
-import it from "./components/it.png"
+import it from "./components/IT.jpg"
 import realestate from "./components/Real Estate.jpg"
-import retail from "./components/retail.png"
+import retail from "./components/Retail.jpg"
 import green from "./components/Green.jpg"
 import healthcare from "./components/HEALTH CARE.jpg"
 import achieve from "./components/ENAGE ICONS-10.jpg"
@@ -81,18 +81,49 @@ function App() {
 
       {/* Mobile Menu */}
       <div 
-        className={`fixed top-0 right-0 h-full w-full md:w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed top-0 right-0 h-full w-full md:w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="p-8 space-y-6 mt-16">
-          <button onClick={() => scrollToSection(headerRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Home</button>
-          <button onClick={() => scrollToSection(industriesRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Industries</button>
-          <button onClick={() => scrollToSection(approachRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Approach</button>
-          <button onClick={() => scrollToSection(impactRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Impact</button>
-          <button onClick={() => scrollToSection(storiesRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Stories</button>
-          <button onClick={() => scrollToSection(contactRef)} className="block w-full text-left py-3 px-4 hover:bg-blue-50 rounded-lg transition-colors">Contact</button>
-        </div>
+       <div className="p-8 space-y-12 mt-16">
+  <button 
+    onClick={() => scrollToSection(headerRef)} 
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
+  >
+    Home
+  </button>
+  <button 
+    onClick={() => scrollToSection(industriesRef)} 
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600' }}
+  >
+    About 
+  </button>
+  <button 
+    onClick={() => scrollToSection(approachRef)}  
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
+  >
+ Services
+  </button>
+  <button 
+    onClick={() => scrollToSection(impactRef)} 
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{fontSize : "2.5rem" , fontWeight : '600'}}
+  >
+ Influencer Marketing
+  </button>
+  <button 
+    onClick={() => scrollToSection(storiesRef)} 
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
+  >
+Blog
+  </button>
+  <button 
+    onClick={() => scrollToSection(contactRef)} 
+    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"   style={{fontSize : "2.5rem" , fontWeight : '600'}}
+  >
+Career
+  </button>
+</div>
+
       </div>
 
       {/* Overlay */}
@@ -109,7 +140,7 @@ function App() {
         <section ref={headerRef} className="h-screen flex items-center justify-center bg-white px-10">
         <div className="text-center slide-in-bottom">
           <h1>
-            <div className="text-5xl md:text-8xl font-bold text-black tracking-tight">
+            <div className="text-5xl md:text-8xl font-bold text-black tracking-tight font-use">
               SHAPING VISIONS, <br/> DELIVERING RESULTS
             </div>
             <div className="mt-8 text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
@@ -121,7 +152,7 @@ function App() {
 
         {/* Industries Section */}
         <section ref={industriesRef} className="px-4 md:px-16 py-12 md:py-20">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4  font-family: 'Bebas Neue', sans-serif;">
             INDUSTRIES IMPACTED
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -135,7 +166,7 @@ function App() {
                   />
                 </div>
                 <div className="mt-4 flex  items-center">
-                  <h3 className="text-2xl font-bold text-black uppercase mr-2">{industry.title}</h3>
+                  <h3 className="text-2xl font-bold text-black uppercase mr-2 font-use">{industry.title}</h3>
                   <button className="bg-gray-900 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-gray-800 transition-colors flex-shrink-0">
                     VIEW <ArrowRight className="w-4 h-4" />
                   </button>
@@ -147,14 +178,14 @@ function App() {
 
         {/* Approach Section */}
         <section ref={approachRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-100">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">OUR APPROACH</h2>
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">OUR APPROACH</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {approaches.map((approach, index) => (
               <div key={index} className="text-center">
      <img 
                   src={approach.image} 
                   alt={approach.title} 
-                  className="w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition-all"
+                  className="w-80 h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition-all"
                   loading="lazy"
                 />
                 <p className="mt-2 font-semibold text-sm md:text-base">{approach.title}</p>
@@ -186,7 +217,7 @@ function App() {
 
         {/* Impact Section */}
         <section ref={impactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">POTENTIAL IMPACT</h2>
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">POTENTIAL IMPACT</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
   
                 <img 
@@ -208,7 +239,7 @@ function App() {
 
         {/* Stories Section */}
         <section ref={storiesRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">FEATURED STORIES</h2>
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">FEATURED STORIES</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {stories.map((story, index) => (
               <div key={index} className="group cursor-pointer">
@@ -218,8 +249,8 @@ function App() {
                   className="w-full h-78 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
-                <p style={{color :'#F5682A'}}>Category</p>
-                <h3 className="font-semibold text-sm md:text-base group-hover:text-blue-600 transition-colors">{story.title}</h3>
+                <p style={{color :'#F5682A'}} >Category</p>
+                <h3 className="font-semibold text-sm md:text-base group-hover:text-blue-600 transition-colors font-use">{story.title}</h3>
                 <p style={{color :'#3E3A3A' }} className='mt-12 '>Read More</p>
               </div>
             ))}
@@ -228,7 +259,7 @@ function App() {
 
         {/* Contact Section */}
         <section ref={contactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-white text-black">
-          <h1 className="text-6xl font-bold mb-16">LET'S DISCUSS YOUR DIGITAL<br />MARKETING NEEDS</h1>
+          <h1 className="text-6xl font-bold mb-16 font-use" style={{fontFamily : 'Bebas Neue'}}>LET'S DISCUSS YOUR DIGITAL<br />MARKETING NEEDS</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <label className="block mb-2">Enter Full Name</label>
@@ -322,7 +353,7 @@ function App() {
                   <a href="#" className="hover:text-gray-300">
                     CONTACT US
                   </a>
-                  <a href="#" className="hover:text-gray-300">
+                  <a href="#" className="hover:text-gray-300 ">
                     HELP
                   </a>
                   <a href="#" className="hover:text-gray-300">
