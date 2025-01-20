@@ -1,5 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Mail, Phone, Facebook, Twitter, Linkedin, Instagram, Menu, X } from 'lucide-react';
+import potential from "./components/potential.png";
+import f1 from "./components/f-1.png"
+import f2 from "./components/f-2.png"
+import f3 from "./components/f-3.png"
+import insurance from "./components/FINANCIAL.jpg"
+import it from "./components/it.png"
+import realestate from "./components/Real Estate.jpg"
+import retail from "./components/retail.png"
+import green from "./components/Green.jpg"
+import healthcare from "./components/HEALTH CARE.jpg"
+import achieve from "./components/ENAGE ICONS-10.jpg"
+import analyze from "./components/ENAGE ICONS-02.jpg"
+
+import engage from "./components/ENAGE ICONS-01.jpg"
+import strateize from "./components/ENAGE ICONS-07.jpg"
+import implement from "./components/ENAGE ICONS-04.jpg"
+import hamburger from "./components/hamburger.png"
+
 
 function useIntersectionObserver(options = {}) {
   const elementRef = useRef(null);
@@ -43,13 +61,22 @@ function App() {
     <div className="min-h-screen bg-white relative">
       {/* Navigation */}
       <nav className="fixed top-0 right-0 z-50 p-4 md:p-6">
-        <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="bg-white p-2 md:p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+      <button 
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      className=""
+      aria-label="Toggle menu"
+    >
+      {isMenuOpen ? (
+        <>
+          <X size={24} />
+          {/* <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" /> */}
+        </>
+      ) : (
+        <>
+          <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" />
+        </>
+      )}
+    </button>
       </nav>
 
       {/* Mobile Menu */}
@@ -79,32 +106,38 @@ function App() {
       {/* Content */}
       <div className="pt-16">
         {/* Hero Section */}
-        <section ref={headerRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-20 bg-white">
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight">
-            SHAPING VISIONS,<br />
-            DELIVERING RESULTS
+        <section ref={headerRef} className="h-screen flex items-center justify-center bg-white px-10">
+        <div className="text-center slide-in-bottom">
+          <h1>
+            <div className="text-5xl md:text-8xl font-bold text-black tracking-tight">
+              SHAPING VISIONS, <br/> DELIVERING RESULTS
+            </div>
+            <div className="mt-8 text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
+              We <span className="font-bold text-black">CREATE</span> brands, <span className="font-bold text-black">PRESERVE</span> unique identity, <span className="font-bold text-black">TRANSFORM</span> your business.
+            </div>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
-            We <span className="font-semibold">CREATE</span> brands, <span className="font-semibold">PRESERVE</span> unique identity, <span className="font-semibold">TRANSFORM</span> your business.
-          </p>
-        </section>
+        </div>
+      </section>
 
         {/* Industries Section */}
-        <section ref={industriesRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-50">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">INDUSTRIES IMPACTED</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <section ref={industriesRef} className="px-4 md:px-16 py-12 md:py-20">
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">
+            INDUSTRIES IMPACTED
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {industries.map((industry, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg">
-                <img 
-                  src={industry.image} 
-                  alt={industry.title} 
-                  className="w-full h-48 md:h-64 object-cover transition-transform group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
-                  <h3 className="text-lg font-semibold">{industry.title}</h3>
-                  <button className="mt-2 text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn More <ArrowRight size={16} />
+              <div key={index} className="group">
+                <div className="relative">
+                  <img
+                    src={industry.image || "/placeholder.svg"}
+                    alt={industry.title}
+                    className="w-full h-[400px] object-cover"
+                  />
+                </div>
+                <div className="mt-4 flex  items-center">
+                  <h3 className="text-2xl font-bold text-black uppercase mr-2">{industry.title}</h3>
+                  <button className="bg-gray-900 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-gray-800 transition-colors flex-shrink-0">
+                    VIEW <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -113,42 +146,59 @@ function App() {
         </section>
 
         {/* Approach Section */}
-        <section ref={approachRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">OUR APPROACH</h2>
+        <section ref={approachRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-100">
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">OUR APPROACH</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {approaches.map((approach, index) => (
               <div key={index} className="text-center">
-                <img 
+     <img 
                   src={approach.image} 
                   alt={approach.title} 
                   className="w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition-all"
                   loading="lazy"
                 />
                 <p className="mt-2 font-semibold text-sm md:text-base">{approach.title}</p>
-              </div>
+                
+              </div> 
             ))}
           </div>
+          <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl mx-auto mt-20">
+            {services.map((service, index) => (
+              <button 
+                key={index}
+                className="px-6 py-3 border-2 border-black rounded-full transition-colors duration-300 flex items-center gap-2 whitespace-nowrap" 
+
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = '#F5682A';
+    e.currentTarget.style.color = 'white';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.color = 'black';
+  }}
+              >
+                {service} <ArrowRight className="w-4 h-4" />
+              </button>
+            ))}
+          </div>
+          
         </section>
 
         {/* Impact Section */}
-        <section ref={impactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-50">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">POTENTIAL IMPACT</h2>
+        <section ref={impactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">POTENTIAL IMPACT</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="grid grid-cols-2 gap-4">
-              {impacts.map((impact, index) => (
+  
                 <img 
-                  key={index} 
-                  src={impact} 
+                  src={potential} 
                   alt="Impact" 
-                  className="w-full h-32 md:h-48 object-cover rounded-lg"
+                  className="w-full h-42 md:h-58 object-cover rounded-lg"
                   loading="lazy"
                 />
-              ))}
-            </div>
-            <div className="space-y-4">
+            <div className="space-y-14">
               {impactPoints.map((point, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0" />
+                  <div className="w-2 h-2 bg-black rounded-full flex-shrink-0"  />
                   <p className="text-sm md:text-base">{point}</p>
                 </div>
               ))}
@@ -158,67 +208,136 @@ function App() {
 
         {/* Stories Section */}
         <section ref={storiesRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">FEATURED STORIES</h2>
+          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4">FEATURED STORIES</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {stories.map((story, index) => (
               <div key={index} className="group cursor-pointer">
                 <img 
                   src={story.image} 
                   alt={story.title} 
-                  className="w-full h-48 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
+                  className="w-full h-78 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
                   loading="lazy"
                 />
+                <p style={{color :'#F5682A'}}>Category</p>
                 <h3 className="font-semibold text-sm md:text-base group-hover:text-blue-600 transition-colors">{story.title}</h3>
+                <p style={{color :'#3E3A3A' }} className='mt-12 '>Read More</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Contact Section */}
-        <section ref={contactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-900 text-white">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">LET'S DISCUSS YOUR DIGITAL MARKETING NEEDS</h2>
-          <form className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <input 
-              type="text" 
-              placeholder="Full Name" 
-              className="bg-transparent border border-gray-700 p-3 rounded-lg w-full focus:border-blue-500 focus:outline-none transition-colors"
-            />
-            <input 
-              type="text" 
-              placeholder="Contact" 
-              className="bg-transparent border border-gray-700 p-3 rounded-lg w-full focus:border-blue-500 focus:outline-none transition-colors"
-            />
-            <input 
-              type="email" 
-              placeholder="Email" 
-              className="bg-transparent border border-gray-700 p-3 rounded-lg w-full focus:border-blue-500 focus:outline-none transition-colors"
-            />
-            <textarea 
-              placeholder="Message" 
-              rows={4} 
-              className="bg-transparent border border-gray-700 p-3 rounded-lg w-full md:col-span-2 focus:border-blue-500 focus:outline-none transition-colors"
-            />
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors md:col-span-2 w-full md:w-auto md:mx-auto">
-              Submit
-            </button>
-          </form>
-
-          <footer className="mt-16 flex flex-col md:flex-row justify-between items-center gap-8">
-            <img 
-              src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9" 
-              alt="Logo" 
-              className="h-8 md:h-12 w-auto object-contain"
-              loading="lazy"
-            />
-            <div className="flex items-center gap-4 md:gap-6">
-              <Mail className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
-              <Phone className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
-              <Facebook className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
-              <Twitter className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
-              <Linkedin className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
-              <Instagram className="w-5 h-5 cursor-pointer hover:text-blue-400 transition-colors" />
+        <section ref={contactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-white text-black">
+          <h1 className="text-6xl font-bold mb-16">LET'S DISCUSS YOUR DIGITAL<br />MARKETING NEEDS</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <label className="block mb-2">Enter Full Name</label>
+              <input
+                type="text"
+                placeholder="Enter Full Name"
+                className="w-full p-4 rounded-3xl bg-gray-100"
+              />
             </div>
-          </footer>
+            <div>
+              <label className="block mb-2">Contact</label>
+              <input
+                type="tel"
+                placeholder="+91"
+                className="w-full p-4 rounded-3xl bg-gray-100"
+              />
+            </div>
+          </div>
+          <div className="mt-8">
+            <label className="block mb-2">Email</label>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className="w-full p-4 rounded-3xl bg-gray-100"
+            />
+          </div>
+          <div className="mt-8">
+            <label className="block mb-2">Message</label>
+            <textarea
+              placeholder="Write Your Query"
+              className="w-full p-4 rounded-3xl bg-gray-100 h-32"
+            ></textarea>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <button className="bg-[#3E3A3A] text-white px-12 py-4 rounded-full hover:bg-black transition-colors flex items-center gap-2">
+              Submit <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </section>
+        {/* footer section here  */}
+        <section className="bg-[#0A1426] text-white px-4 md:px-16 py-12">
+          <div className="container mx-auto">
+            {/* Logo and Contact Info */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Logo */}
+              <div>
+                <img src="/placeholder.svg" alt="Logo" className="h-16 w-auto" />
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-2">
+                <div className="mt-1">📍</div>
+                <div>345 Faulconer Drive, Suite 4 • Charlottesville, CA, 123E</div>
+              </div>
+
+              {/* Phone Numbers */}
+              <div className="flex flex-col md:flex-row gap-4 md:justify-end">
+                <div className="flex items-center gap-2">
+                  <Phone size={20} />
+                  <span>(123) 456-7890</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail size={20} />
+                  <span>(123) 456-7890</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media and Navigation */}
+            <div className="border-t border-gray-700 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                {/* Social Media */}
+                <div className="flex items-center gap-6">
+                  <span className="text-sm">Social Media</span>
+                  <div className="flex gap-4">
+                    <Facebook size={20} className="cursor-pointer hover:text-gray-300" />
+                    <Twitter size={20} className="cursor-pointer hover:text-gray-300" />
+                    <Linkedin size={20} className="cursor-pointer hover:text-gray-300" />
+                    {/* <Youtube size={20} className="cursor-pointer hover:text-gray-300" /> */}
+                    <Instagram size={20} className="cursor-pointer hover:text-gray-300" />
+                    <Mail size={20} className="cursor-pointer hover:text-gray-300" />
+                    {/* <Rss size={20} className="cursor-pointer hover:text-gray-300" /> */}
+                  </div>
+                </div>
+
+                {/* Navigation Links */}
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <a href="#" className="hover:text-gray-300">
+                    ABOUT US
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    CONTACT US
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    HELP
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    PRIVACY POLICY
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    DISCLAIMER
+                  </a>
+                </div>
+              </div>
+
+              {/* Copyright */}
+              <div className="text-right text-sm mt-8">Copyright © 2018 • Lift Media Inc.</div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -228,50 +347,50 @@ function App() {
 const industries = [
   {
     title: 'Insurance & Banking',
-    image: 'https://images.unsplash.com/photo-1560472355-536de3962603',
+    image: insurance,
   },
   {
     title: 'Real Estate',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa',
+    image: realestate,
   },
   {
     title: 'Retail',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8',
+    image: retail,
   },
   {
     title: 'Healthcare',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118',
+    image: healthcare,
   },
   {
     title: 'IT Services',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
+    image : it,
   },
   {
     title: 'Green Energy',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e',
+    image: green,
   },
 ];
 
 const approaches = [
   {
     title: 'ENGAGE',
-    image: 'https://images.unsplash.com/photo-1552581234-26160f608093',
+    image: engage,
   },
   {
     title: 'ANALYZE',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+    image: analyze,
   },
   {
     title: 'STRATEGIZE',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    image: strateize,
   },
   {
     title: 'IMPLEMENT',
-    image: 'https://images.unsplash.com/photo-1552581234-26160f608093',
+    image: implement,
   },
   {
     title: 'ACHIEVE',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    image: achieve,
   },
 ];
 
@@ -290,18 +409,27 @@ const impactPoints = [
   'Data-Driven Insights & Strategic Direction',
 ];
 
+const services = [
+  'Brand Building',
+  'Performance & Lead Generation',
+  'Digital Art & VFX',
+  'Marketplace Management',
+  'Influencer Marketing',
+  'AR & VR solution'
+];
+
 const stories = [
   {
     title: 'Streamlining Business Operations: The Power of SaaS Business Tools',
-    image: 'https://images.unsplash.com/photo-1552581234-26160f608093',
+    image: f1,
   },
   {
     title: 'Boost Your Marketing Results Through Data-Driven Decision Making',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+    image: f2,
   },
   {
     title: 'Outshine the Competition with the Best Digital Marketing Company in Bangalore',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    image: f3,
   },
 ];
 
