@@ -6,9 +6,9 @@ import potential from "./components/potential.png";
 import f1 from "./components/f-1.png"
 import f2 from "./components/f-2.png"
 import f3 from "./components/f-3.png"
-import insurance from "./components/FINANCIAL.jpg"
+import insurance from "./components/insure.png"
 import it from "./components/IT.jpg"
-import realestate from "./components/Real Estate.jpg"
+import realestate from "./components/real-estate.png"
 import retail from "./components/Retail.jpg"
 import green from "./components/Green.jpg"
 import healthcare from "./components/HEALTH CARE.jpg"
@@ -19,9 +19,12 @@ import engage from "./components/ENAGE ICONS-01.jpg"
 import strateize from "./components/ENAGE ICONS-07.jpg"
 import implement from "./components/ENAGE ICONS-04.jpg"
 import hamburger from "./components/hamburger.png"
-import blacklogo from "./components/black_white_logo.png"
-import whitelogo from "./components/logo-color.png"
+import blacklogo from "./components/fin-logo.png"
+import whitelogo from "./components/fin-logo-2.png"
+
 import { useNavigate } from 'react-router-dom'
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 
 function useIntersectionObserver(options = {}) {
@@ -66,6 +69,9 @@ function Home() {
   const handleServiceNavigation = ()=>{
     navigate('/service')
   }
+  const handleCareerNavigation = ()=>{
+    navigate('/career')
+  }
 
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     setIsMenuOpen(false);
@@ -75,102 +81,17 @@ function Home() {
   return (
     <div className="min-h-screen bg-white relative">
       {/* Navigation */}
-      <div className="fixed top-0 left-0 z-50 p-4 md:p-6 text-2xl font-bold">
-      <img
-      src={logo}
-      alt="logo"
-      width={100} 
-      height={200} // Set a fixed height
-    //   style={{ objectFit: 'contain', transition: 'opacity 0.3s ease' }}
-      onMouseEnter={() => setLogo(whitelogo)}
-      onMouseLeave={() => setLogo(blacklogo)}
-    />
-      </div>
-      <nav className="fixed top-0 right-0 z-50 p-4 md:p-6">
-      
-      <button 
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-      className=""
-      aria-label="Toggle menu"
-    >
-      {isMenuOpen ? (
-        <>
-          <X size={24} />
-          {/* <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" /> */}
-        </>
-      ) : (
-        <>
-          <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" />
-        </>
-      )}
-    </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-full md:w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-       <div className="p-8 space-y-12 mt-16">
-  <button 
-    onClick={() => scrollToSection(headerRef)} 
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-    Home
-  </button>
-  <button 
-    onClick={handleNavigation} 
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600' }}
-  >
-    About 
-  </button>
-  <button 
-    onClick={handleServiceNavigation}  
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
- Services
-  </button>
-  <button 
-    onClick={handleServiceNavigation} 
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
- Influencer Marketing
-  </button>
-  <button 
-    onClick={() => scrollToSection(storiesRef)} 
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-Blog
-  </button>
-  <button 
-    onClick={() => scrollToSection(contactRef)} 
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"   style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-Career
-  </button>
-</div>
-
-      </div>
-
-      {/* Overlay */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
-
+      <Navbar/>
       {/* Content */}
       <div className="pt-16">
         {/* Hero Section */}
         <section ref={headerRef} className="h-screen flex items-center justify-center bg-white px-10">
         <div className="text-center slide-in-bottom">
           <h1>
-            <div className="text-8xl md:text-8xl text-black tracking-tight font-use" style={{fontSize : "10rem"}} >
+            <div className="text-8xl md:text-8xl text-black tracking-tight font-use" style={{fontSize : "11rem"}} >
               SHAPING VISIONS, <br/> DELIVERING RESULTS
             </div>
-            <div className="mt-8 text-xl md:text-2xl text-gray-600 max-w-4xl "  style={{marginBottom : '250px'}}>
+            <div className="mt-8 text-lg md:text-2xl text-gray-600 max-w-4xl "  style={{marginBottom : '250px'}}>
               We <span className="font-bold text-black">CREATE</span> brands, <span className="font-bold text-black">PRESERVE</span> unique identity, <span className="font-bold text-black">TRANSFORM</span> your business.
             </div>
           </h1>
@@ -179,7 +100,7 @@ Career
 
         {/* Industries Section */}
         <section ref={industriesRef} className="px-4 md:px-16 py-12 md:py-20">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">
+          <h2 className="text-3xl md:text-6xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">
             INDUSTRIES IMPACTED
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -194,9 +115,6 @@ Career
                 </div>
                 <div className="mt-4 flex  items-center">
                   <h3 className="text-2xl font-bold text-black uppercase mr-2 font-use">{industry.title}</h3>
-                  <button className="bg-gray-900 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-gray-800 transition-colors flex-shrink-0">
-                    VIEW <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               </div>
             ))}
@@ -205,7 +123,7 @@ Career
 
         {/* Approach Section */}
         <section ref={approachRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-gray-100">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">OUR APPROACH</h2>
+          <h2 className="text-3xl md:text-6xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">OUR APPROACH</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {approaches.map((approach, index) => (
               <div key={index} className="text-center">
@@ -222,21 +140,25 @@ Career
           </div>
           <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl mx-auto mt-20">
             {services.map((service, index) => (
+                <a href={service.link}>
               <button 
                 key={index}
-                className="px-6 py-3 border-2 border-black rounded-full transition-colors duration-300 flex items-center gap-2 whitespace-nowrap" 
+                className="px-6 py-3 border-black rounded-full transition-colors duration-300 flex items-center gap-2 whitespace-nowrap"  style={{border : '1px solid black'}}
 
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = '#F5682A';
     e.currentTarget.style.color = 'white';
+    e.currentTarget.style.border = 'none';
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = 'transparent';
     e.currentTarget.style.color = 'black';
+    e.currentTarget.style.border = '1px solid black';
   }}
               >
-                {service} <ArrowRight className="w-4 h-4" />
+                {service.name} <ArrowRight className="w-4 h-4" />
               </button>
+              </a>
             ))}
           </div>
           
@@ -244,20 +166,21 @@ Career
 
         {/* Impact Section */}
         <section ref={impactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">POTENTIAL IMPACT</h2>
+          <h2 className="text-3xl md:text-6xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">OUR POTENTIAL IMPACT</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
   
                 <img 
                   src={potential} 
+                  
                   alt="Impact" 
-                  className="w-full h-42 md:h-58 object-cover rounded-lg"
+                  className="w-full h-42 md:h-50 object-cover rounded-lg"
                   loading="lazy"
                 />
-            <div className="space-y-14">
+            <div className="space-y-20">
               {impactPoints.map((point, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-black rounded-full flex-shrink-0"  />
-                  <p className="text-sm md:text-base">{point}</p>
+                  <p className="text-sm md:text-base" style={{fontSize : '2rem'}}>{point}</p>
                 </div>
               ))}
             </div>
@@ -266,7 +189,7 @@ Career
 
         {/* Stories Section */}
         <section ref={storiesRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16">
-          <h2 className="text-3xl md:text-3xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">FEATURED STORIES</h2>
+          <h2 className="text-3xl md:text-6xl font-bold mb-12 uppercase border-b-2 border-black pb-4 font-use">FEATURED STORIES</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {stories.map((story, index) => (
               <div key={index} className="group cursor-pointer">
@@ -287,7 +210,7 @@ Career
         {/* Contact Section */}
         <section ref={contactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-white text-black">
         <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
-      LET'S DISCUSS
+      LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -329,72 +252,8 @@ Career
             </button>
           </div>
         </section>
-        {/* footer section here  */}
-        <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div>
-              <h3 className="text-xl font-bold mb-4">COMPANY</h3>
-              <ul className="space-y-2">
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">SERVICES</h3>
-              <ul className="space-y-2">
-                <li>Digital Marketing</li>
-                <li>Web Development</li>
-                <li>SEO</li>
-                <li>Performance Marketing</li>
-                <li>AI & ML Services</li>
-                <li>Advanced Marketing</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">CONTACT</h3>
-              <div className="space-y-2">
-                <p>Head Office: Ground Floor, Plot No 127, Sector 44,</p>
-                <p>Gurugram, Haryana 122003</p>
-                <p>Email: info@digitalpolaris.com</p>
-                <p>Phone: +91 9818880100</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Footer */}
-          <div className="border-t border-white/20 pt-8">
-            {/* Social Media and Navigation */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-              {/* Social Media Icons */}
-              <div className="flex gap-6">
-                {/* <Facebook size={20} className="cursor-pointer hover:text-gray-300" />
-                <Twitter size={20} className="cursor-pointer hover:text-gray-300" />
-                <Linkedin size={20} className="cursor-pointer hover:text-gray-300" />
-                <Instagram size={20} className="cursor-pointer hover:text-gray-300" />
-                <Youtube size={20} className="cursor-pointer hover:text-gray-300" /> */}
-              </div>
-
-              {/* Navigation Links */}
-              <nav className="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="#" className="hover:text-gray-300">ABOUT US</a>
-                <a href="#" className="hover:text-gray-300">CONTACT US</a>
-                <a href="#" className="hover:text-gray-300">HELP</a>
-                <a href="#" className="hover:text-gray-300">PRIVACY POLICY</a>
-                <a href="#" className="hover:text-gray-300">DISCLAIMER</a>
-              </nav>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center text-sm">
-              Copyright © 2024 Digital Polaris
-            </div>
-          </div>
-        </div>
-      </footer>
-
+<Footer/>
+    
       </div>
     </div>
   );
@@ -466,13 +325,13 @@ const impactPoints = [
 ];
 
 const services = [
-  'Brand Building',
-  'Performance & Lead Generation',
-  'Digital Art & VFX',
-  'Marketplace Management',
-  'Influencer Marketing',
-  'AR & VR solution'
-];
+    { name: 'Brand Sculpting', link: '/brand' },
+    { name: 'Performance & Lead Generation', link: '/performance' },
+    { name: 'Digital Arts', link: '/digital' },
+    { name: 'Marketplace Management', link: '/marketplace' },
+    { name: 'Influencer Marketing', link: '/influencer' },
+    { name: 'Ecommerce Solutions', link: '/ecommerce' }
+  ];
 
 const stories = [
   {

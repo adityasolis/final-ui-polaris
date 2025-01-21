@@ -12,6 +12,8 @@ import blacklogo from "./components/black_white_logo.png"
 import whitelogo from "./components/logo-color.png"
 // import { Button } from "@/components/ui/button"
 import hamburger from "./components/hamburger.png"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 export default function BrandSculptingPage() {
 
@@ -39,91 +41,7 @@ export default function BrandSculptingPage() {
 
   return (
     <div ref={containerRef} className="relative">
-              <div className="fixed top-0 left-0 z-50 p-4 md:p-6 text-2xl font-bold">
-      <img
-      src={logo}
-      alt="logo"
-      width={100} 
-      height={200} // Set a fixed height
-    //   style={{ objectFit: 'contain', transition: 'opacity 0.3s ease' }}
-      onMouseEnter={() => setLogo(whitelogo)}
-      onMouseLeave={() => setLogo(blacklogo)}
-    />
-      </div>
-      <nav className="fixed top-0 right-0 z-50 p-4 md:p-6">
-      
-      <button 
-      onClick={() => setIsMenuOpen(!isMenuOpen)}
-      className=""
-      aria-label="Toggle menu"
-    >
-      {isMenuOpen ? (
-        <>
-          <X size={24} />
-          {/* <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" /> */}
-        </>
-      ) : (
-        <>
-          <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" />
-        </>
-      )}
-    </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-full md:w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-       <div className="p-8 space-y-12 mt-16">
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-    Home
-  </button>
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600' }}
-  >
-    About 
-  </button>
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
- Services
-  </button>
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
- Influencer Marketing
-  </button>
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"  style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-Blog
-  </button>
-  <button 
-
-    className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors"   style={{fontSize : "2.5rem" , fontWeight : '600'}}
-  >
-Career
-  </button>
-</div>
-
-      </div>
-
-      {/* Overlay */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
+             <Navbar/>
       {/* Smooth Scroll Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section with Parallax */}
@@ -136,7 +54,7 @@ Career
           >
                <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "10rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "16rem" }}>
             BRAND SCULPTING
           </h1>
         </div>
@@ -211,7 +129,7 @@ Career
         {/* Sub-Services Section with Parallax */}
         <motion.section ref={servicesRef} style={{ y: servicesY }} className="mb-24">
           <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-5xl font-bold mb-8 font-use">
-            OUR SUB-SERVICES:
+            OUR KEY OFFERINGS:
           </motion.h2>
 
           <motion.div
@@ -356,70 +274,7 @@ Career
 
         
       </div>
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div>
-              <h3 className="text-xl font-bold mb-4">COMPANY</h3>
-              <ul className="space-y-2">
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">SERVICES</h3>
-              <ul className="space-y-2">
-                <li>Digital Marketing</li>
-                <li>Web Development</li>
-                <li>SEO</li>
-                <li>Performance Marketing</li>
-                <li>AI & ML Services</li>
-                <li>Advanced Marketing</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">CONTACT</h3>
-              <div className="space-y-2">
-                <p>Head Office: Ground Floor, Plot No 127, Sector 44,</p>
-                <p>Gurugram, Haryana 122003</p>
-                <p>Email: info@digitalpolaris.com</p>
-                <p>Phone: +91 9818880100</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Footer */}
-          <div className="border-t border-white/20 pt-8">
-            {/* Social Media and Navigation */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-              {/* Social Media Icons */}
-              <div className="flex gap-6">
-                {/* <Facebook size={20} className="cursor-pointer hover:text-gray-300" />
-                <Twitter size={20} className="cursor-pointer hover:text-gray-300" />
-                <Linkedin size={20} className="cursor-pointer hover:text-gray-300" />
-                <Instagram size={20} className="cursor-pointer hover:text-gray-300" />
-                <Youtube size={20} className="cursor-pointer hover:text-gray-300" /> */}
-              </div>
-
-              {/* Navigation Links */}
-              <nav className="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="#" className="hover:text-gray-300">ABOUT US</a>
-                <a href="#" className="hover:text-gray-300">CONTACT US</a>
-                <a href="#" className="hover:text-gray-300">HELP</a>
-                <a href="#" className="hover:text-gray-300">PRIVACY POLICY</a>
-                <a href="#" className="hover:text-gray-300">DISCLAIMER</a>
-              </nav>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center text-sm">
-              Copyright © 2024 Digital Polaris
-            </div>
-          </div>
-        </div>
-      </footer>
+     <Footer/>
     </div>
   )
 }

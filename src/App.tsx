@@ -4,6 +4,14 @@ import About from './About';
 import Service from './Service';
 import Brand from "./Brand"
 import Performance from './Performance';
+import Influencer from './Influencer';
+import EcommercePage from './EcommercePage';
+import Marketplace from './Markeplace';
+import DigitalArts from './DigitalArts';
+import Contact from './Contact';
+import Footer from './Footer';
+import Career from './Career';
+import CareerInfo from  "./JobDetail"
 function App() {
   return (
     <Router>
@@ -15,10 +23,13 @@ function App() {
           <Route path="/service" element={<Service/>} />
           <Route path="/brand" element={<Brand/>} />
           <Route path="/performance" element={<Performance/>} />
-          <Route path="/influencer" element={<Service/>} />
-          <Route path="/ecommerce" element={<Service/>} />
-          <Route path="/marketplace" element={<Service/>} />
-          <Route path="/digital" element={<Service/>} />
+          <Route path="/influencer" element={<Influencer/>} />
+          <Route path="/ecommerce" element={<EcommercePage/>} />
+          <Route path="/marketplace" element={<Marketplace/>} />
+          <Route path="/digital" element={<DigitalArts/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/career" element={<Career/>} />
+          <Route path="/careerinfo" element={<CareerInfo/>} />
         </Routes>
       </div>
     </Router>

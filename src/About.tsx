@@ -1,9 +1,8 @@
 import hamburger from "./components/hamburger.png";
-import blacklogo from "./components/black_white_logo.png";
 import { X } from 'lucide-react';
 import { Parallax } from 'react-parallax';
 import { useState } from "react";
-import AboutUs from "./components/about-3.jpg";
+import AboutUs from "./components/about-parallex.png";
 import ImageSlider from "./ImageSlider";
 import pic1 from "./components/pic-1.png";
 import pic2 from "./components/pic-2.png";
@@ -12,35 +11,24 @@ import pic4 from "./components/pic-4.png";
 import pic5 from "./components/pic-5.png";
 import pic6 from "./components/pic-6.jpg";
 import group from "./components/BB.jpg";
+import Footer from "./Footer";
+import blacklogo from "./components/fin-logo.png"
+import whitelogo from "./components/fin-logo-2.png"
+import Navbar from "./Navbar";
 
 const About = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const horizontalImages = [pic1, pic2, pic3, pic4, pic5, pic6];
+  const [logo , setLogo] = useState(blacklogo);
 
   return (
     <div className="min-h-screen bg-white relative">
       {/* Navigation */}
-      <div className="fixed top-0 left-0 z-50 p-4 md:p-6 text-2xl font-bold">
-        <img src={blacklogo} alt="logo" width={100} />
-      </div>
-      <nav className="fixed top-0 right-0 z-50 p-4 md:p-6">
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className=""
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <X size={24} />
-          ) : (
-            <img src={hamburger} alt="Menu Open" className="w-6 h-6 inline-block ml-2" />
-          )}
-        </button>
-      </nav>
-
+      <Navbar/>
       {/* About Section */}
       <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "10rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "20rem" }}>
             ABOUT US
           </h1>
         </div>
@@ -51,45 +39,56 @@ const About = () => {
         blur={0}
         bgImage={AboutUs}
         strength={200}
-        className="h-[800px] relative mb-10"
+        className="h-[600px] relative" // Reduced from 1000px to 600px
       >
       </Parallax>
 
       {/* Content Section with Parallax Effect */}
-      <Parallax strength={150} className="bg-white py-16">
-        <section>
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-gray-700 mb-8 text-lg md:text-xl lg:text-2xl">
-                Digital Polaris illuminates brands in the digital universe. Fueled by innovation and data-driven
-                strategies, we craft tailored solutions that amplify visibility, boost engagement, and drive conversions.
-                Our team of seasoned professionals delivers measurable results that spark growth and ensure your
-                brand's success in an ever-evolving digital world.
+      <Parallax strength={150} className="bg-white">
+      <section className="pt-10 px-6"> {/* Reduced padding-top from py-20 */}
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[1.5rem] leading-relaxed mb-10 text-[#333333]">
+            Digital Polaris illuminates brands in the digital universe. Fueled by innovation and data-driven
+            strategies, we craft tailored solutions that amplify visibility, boost engagement, and drive conversions.
+            Our team of seasoned professionals delivers measurable results that spark growth and ensure your
+            brand's success in an ever-evolving digital world.
+          </p>
+
+          <h2 className="text-[3.5rem] font-bold mb-10 text-[#333333]">
+            Experience Limitless Growth
+          </h2>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-[1.5rem] font-bold text-[#333333] mb-1">
+                Ethos:
+              </h3>
+              <p className="text-[1.5rem] text-[#333333]">
+                We are a results-oriented team of digital marketing specialists, which builds thriving brands.
               </p>
-              <h3 className="text-3xl font-bold mb-6">Experience Limitless Growth</h3>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-xl font-bold">Ethos:</h4>
-                  <p className="text-lg md:text-xl lg:text-2xl">
-                    We are a results-oriented team of digital marketing specialists, which builds thriving brands.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold">Mastery:</h4>
-                  <p className="text-lg md:text-xl lg:text-2xl">
-                    We craft tailored digital strategies that ensure manifold visibility, engagement, and deliver desired results.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold">Polaris:</h4>
-                  <p className="text-lg md:text-xl lg:text-2xl">
-                    Ensuring transformative growth to propel brands to market leadership.
-                  </p>
-                </div>
-              </div>
+            </div>
+
+            <div>
+              <h3 className="text-[1.5rem] font-bold text-[#333333] mb-1">
+                Mastery:
+              </h3>
+              <p className="text-[1.5rem] text-[#333333]">
+                We craft tailored digital strategies that ensures manifold visibility, engagement, and delivers
+                desired results.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-[1.55rem] font-bold text-[#333333] mb-1">
+                Polaris:
+              </h3>
+              <p className="text-[1.5rem] text-[#333333]">
+                Ensuring transformative growth to propel brands to market leadership.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       </Parallax>
 
       {/* Image Slider with Horizontal Parallax */}
@@ -128,76 +127,12 @@ const About = () => {
       </Parallax>
       <div className="container mx-auto ">
       <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
-      LET'S DISCUSS
+      LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
   </div>
       <section >
-
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-4">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div>
-              <h3 className="text-xl font-bold mb-4">COMPANY</h3>
-              <ul className="space-y-2">
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">SERVICES</h3>
-              <ul className="space-y-2">
-                <li>Digital Marketing</li>
-                <li>Web Development</li>
-                <li>SEO</li>
-                <li>Performance Marketing</li>
-                <li>AI & ML Services</li>
-                <li>Advanced Marketing</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">CONTACT</h3>
-              <div className="space-y-2">
-                <p>Head Office: Ground Floor, Plot No 127, Sector 44,</p>
-                <p>Gurugram, Haryana 122003</p>
-                <p>Email: info@digitalpolaris.com</p>
-                <p>Phone: +91 9818880100</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Footer */}
-          <div className="border-t border-white/20 pt-8">
-            {/* Social Media and Navigation */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-              {/* Social Media Icons */}
-              <div className="flex gap-6">
-                {/* <Facebook size={20} className="cursor-pointer hover:text-gray-300" />
-                <Twitter size={20} className="cursor-pointer hover:text-gray-300" />
-                <Linkedin size={20} className="cursor-pointer hover:text-gray-300" />
-                <Instagram size={20} className="cursor-pointer hover:text-gray-300" />
-                <Youtube size={20} className="cursor-pointer hover:text-gray-300" /> */}
-              </div>
-
-              {/* Navigation Links */}
-              <nav className="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="#" className="hover:text-gray-300">ABOUT US</a>
-                <a href="#" className="hover:text-gray-300">CONTACT US</a>
-                <a href="#" className="hover:text-gray-300">HELP</a>
-                <a href="#" className="hover:text-gray-300">PRIVACY POLICY</a>
-                <a href="#" className="hover:text-gray-300">DISCLAIMER</a>
-              </nav>
-            </div>
-
-            {/* Copyright */}
-            <div className="text-center text-sm">
-              Copyright © 2024 Digital Polaris
-            </div>
-          </div>
-        </div>
-      </footer>
+<Footer/>
 </section>
     </div>
   );
