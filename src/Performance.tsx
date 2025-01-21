@@ -10,6 +10,8 @@ import { ArrowRight, Mail, Phone, Facebook, Twitter, Linkedin, Instagram, Menu, 
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import blacklogo from "./components/black_white_logo.png"
 import whitelogo from "./components/logo-color.png"
+import performancegen from "./components/performance-gen.png"
+import performancegen2 from "./components/performance-gen-2.png"
 // import { Button } from "@/components/ui/button"
 import hamburger from "./components/hamburger.png"
 
@@ -154,7 +156,7 @@ Career
             transition={{ delay: 0.2 }}
             className="text-5xl font-bold text-gray-900 mb-4 font-use"
           >
-            Drive Brand Success with Purposeful Strategy
+            Generate More Qualified Leads
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -162,9 +164,7 @@ Career
             transition={{ delay: 0.3 }}
             className="text-gray-600 mb-6 font-pop text-xl" style={{font : '1.3rem'}}
           >
-            Your brand is more than just a logo or a tagline—it's the essence of your business. A well-built brand tells
-            a compelling story, builds trust, and creates emotional connections with your audience. We help businesses
-            carve out a unique space in the market with strategic brand-building solutions.
+          We help businesses achieve their marketing goals by driving targeted traffic, generating high-quality leads, and maximizing ROI through data-driven campaigns across various digital channels. Our expertise lies in developing and executing effective strategies that deliver measurable results.
           </motion.p>
 
           <motion.div
@@ -173,26 +173,26 @@ Career
             transition={{ delay: 0.4 }}
             className="space-y-4 mb-8"
           >
-            <h3 className="font-bold text-xl"   style={{fontSize : '1.3rem'}}>Why Brand Building Matters?</h3>
+            <h3 className="font-bold text-xl"   style={{fontSize : '1.3rem'}}>Why it Matters : </h3>
             <ul className="list-disc pl-5 space-y-2">
               <li style={{fontSize : '1.3rem'}}>
-                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Recognition & Recall</span> - A strong brand ensures your business is
-                memorable and stands out from competitors.
+                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Increased Revenue</span> - Drive more leads, convert more customers, and boost your bottom line.
               </li>
               <li style={{fontSize : '1.3rem'}}>
-                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Trust & Credibility</span> - Consistent branding establishes
-                reliability, making it easier to gain and retain customers.
+                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Improved Brand Visibility</span> - Increase brand awareness and reach a wider audience within your target market.
               </li>
               <li style={{fontSize : '1.3rem'}}>
-                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Market Differentiation</span> - Position yourself uniquely with a strong
-                brand identity that resonates with your audience.
+                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Data-Driven Insights</span> -  Gain valuable data insights to understand customer behavior and refine your marketing strategy.
+              </li>
+              <li style={{fontSize : '1.3rem'}}>
+                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Competitive Advantage</span> -  Stay ahead of the competition by effectively reaching your target audience and generating high-quality leads.
               </li>
             </ul>
           </motion.div>
 
           <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
             <img
-              src={about}
+              src={performancegen2}
               alt="Brand Building Concept"
               className="object-cover"
             />
@@ -211,7 +211,7 @@ Career
         {/* Sub-Services Section with Parallax */}
         <motion.section ref={servicesRef} style={{ y: servicesY }} className="mb-24">
           <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-5xl font-bold mb-8 font-use">
-            OUR SUB-SERVICES:
+          OUR KEY  OFFERING:
           </motion.h2>
 
           <motion.div
@@ -222,24 +222,24 @@ Career
           >
             {[
               {
-                title: "Search Engine Optimization (SEO)",
+                title: "Google ads:",
                 content:
-                  "We offer professional SEO services to boost your online presence with tailored SEO service packages. Our strategies include comprehensive keyword research, technical optimization, keyword research, and link building.",
+                  "We offer expert Google Ads support, managing Google Ads accounts and optimizing campaigns for maximum performance. Our services also include leveraging Google AdSense to drive targeted traffic and increase revenue.",
               },
               {
-                title: "Social Media Marketing(SMM)",
+                title: "Meta ads",
                 content:
-                  "Our social media marketing services enhance your brand's visibility, engagement, and growth through targeted campaigns. We connect you with the right audience, drive traffic, and generate measurable results to boost awareness and customer loyalty.",
+                  "Boost your brand with expert Meta Ads support. We help run impactful Facebook & Instagram Meta Ads through Meta Business Suite, driving engagement, quality leads, and measurable results to elevate your digital marketing strategy.",
               },
               {
-                title: "Pay-per-click (PPC)",
+                title: "Linkedin Ads:",
                 content:
-                  "We offer cutting-edge PPC (SEM) services and PPC campaign management services to drive targeted traffic, generate high-quality leads, and maximize ROI through optimized strategies on Google Ads, Bing, and social media platforms.",
+                  "Manage LinkedIn Ads cost efficiently with our LinkedIn Paid Ads services. Reach decision-makers, drive meaningful leads, and maximize your advertising ROI on the world’s largest professional network.",
               },
               {
-                title: "Content Marketing Service",
+                title: "Email marketing:",
                 content:
-                  "We provide expert content marketing services, crafting engaging, high-quality content tailored to your brand. Our solutions enhance digital marketing efforts, boost visibility, drive conversions, and establish your brand as an industry leader through impactful, audience-focused strategies.",
+                  "Maximize impact with email marketing tools and automation. We design tailored campaigns that engage audiences, nurture leads, and deliver measurable results to elevate your business growth efficiently.",
               },
             ].map((service, index) => (
               <motion.div
@@ -256,61 +256,21 @@ Career
           </motion.div>
         </motion.section>
 
-        <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={brandmid}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="space-y-8"
-          >
-            {[
-              {
-                title: "Lead Generation",
-                content:
-                  "We specialize in B2B lead generation, utilizing advanced strategies and tools to deliver high-quality prospects. As one of the best lead generation companies, we help businesses grow by enhancing sales efficiency and accelerating growth.",
-              },
-              {
-                title: "Email Marketing:",
-                content:
-                  "As an expert email campaign agency, we craft personalized, engaging email marketing strategies to boost sales, retention, and brand awareness. Our services ensure impactful, optimized campaigns, delivering measurable results for your business.",
-              },
-              {
-                title: "Budget & Planning:",
-                content:
-                  "We provide cost-effective marketing strategies tailored to maximize your digital marketing budget, ensuring optimal results. Our budget and planning approach ensures efficient allocation, delivering measurable ROI while meeting your business goals effectively.",
-              },
-              {
-                title: "Marketing Roadmap:",
-                content:
-                  "Our Marketing Roadmap integrates SEO, content, and social media strategies to boost visibility and conversions, while the Sales Strategy Roadmap optimizes lead generation and customer retention, aligning marketing and sales for sustained business growth.",
-              },
-            ].map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="border-b pb-8"
-              >
-                <h3 className="font-bold mb-4" style={{fontSize : '1.5rem'}}>{service.title}</h3>
-                <p className="text-gray-600" style={{fontSize : '1.5rem'}}>{service.content}</p>
-              </motion.div>
-            ))}
-          </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
-  <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600 mt-10">
+  <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600 mt-10 mb-20">
     Let's Create Your Brand Together →
   </button>
 </div>
 
+          </motion.div>
+
+          <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
+            <img
+              src={performancegen}
+              alt="Brand Building Concept"
+              className="object-cover"
+            />
           </motion.div>
 
         {/* FAQ Section with Parallax */}
@@ -325,19 +285,29 @@ Career
           <div className="space-y-8">
             {[
               {
-                question: "What do you mean by brand building?",
+                question: "What key performance indicators (KPIs) do you track for lead generation campaigns?",
                 answer:
-                  "Brand building refers to creating a strong and positive perception of your business in the minds of your target audience through consistent messaging, visual identity, and customer experiences. It forms trust, loyalty, and long-term customer relationships.",
+                  "We track a variety of KPIs, including website traffic, conversion rates, cost per lead (CPL), customer acquisition cost (CAC), return on investment (ROI), and customer lifetime value (CLTV). We also monitor key engagement metrics such as click-through rates (CTR), open rates, and bounce rates to assess campaign effectiveness.",
               },
               {
-                question: "How do SEO, SMM, & PPC work together in digital marketing?",
+                question: "How do you ensure the quality of leads generated? ",
                 answer:
-                  "SEO drives organic growth through optimized content and audience engagement in search results while PPC delivers good paid ads for immediate results. Together, they create a comprehensive digital strategy, enhancing reach, conversions, and ROI.",
+                  "We employ a multi-faceted approach to ensure lead quality. This includes targeted audience segmentation, lead scoring models, and regular campaign optimization to prioritize high-value leads and maximize ROI.",
               },
               {
-                question: "How can businesses use email marketing effectively for lead generation?",
+                question: "What is the typical timeframe for seeing results from a lead generation campaign?",
                 answer:
-                  "Businesses can use email marketing by crafting personalized campaigns with clear CTAs and including new CTAs. Automated follow-ups and segmentation help nurture leads and convert them into customers.",
+                  "The timeframe for seeing results varies depending on the specific campaign objectives, industry, and competition. However, we typically start to see significant results within a few weeks to a few months.",
+              },
+              {
+                question: "How do you stay updated on the latest trends and best practices in performance marketing?",
+                answer:
+                  "We actively stay abreast of the latest industry trends and best practices through ongoing professional development, industry conferences, and continuous research. We leverage data analytics and industry benchmarks to inform our strategies and ensure our clients receive the most effective solutions.",
+              },
+              {
+                question: "How can I get started with your lead generation services? ",
+                answer:
+                  "Schedule a free consultation with our team. During this initial call, we'll discuss your business goals, target audience, marketing budget, and desired outcomes. We'll then develop a customized strategy tailored to your specific needs and provide you with a detailed proposal.",
               },
             ].map((faq, index) => (
               <motion.div
@@ -353,7 +323,10 @@ Career
             ))}
           </div>
         </motion.section>
-
+        <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
+      LET'S DISCUSS
+      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+    </h2>
         
       </div>
       <footer className="bg-black text-white py-12">
