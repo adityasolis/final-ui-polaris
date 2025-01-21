@@ -12,11 +12,13 @@ import Contact from './Contact';
 import Footer from './Footer';
 import Career from './Career';
 import CareerInfo from  "./JobDetail"
+import ScrollToTop from './ScrollToTop';
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
         {/* <Navbar /> */}
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>} />

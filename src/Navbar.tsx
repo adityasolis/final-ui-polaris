@@ -38,36 +38,36 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-full w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="p-8 space-y-12 mt-20">
-          <a href="/">
+          <Link to="/">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               HOME
             </button>
-          </a>
-          <a href="/about">
+          </Link>
+          <Link to="/about">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               ABOUT US
             </button>
-          </a>
-          <a href="/service">
+          </Link>
+          <Link to="/service">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               SERVICES
             </button>
-          </a>
-          <a href="/influencer">
+          </Link>
+          <Link to="/influencer">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               INFLUENCER MARKETING
             </button>
-          </a>
-          <a href="/career">
+          </Link>
+          <Link to="/career">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               CAREER
             </button>
-          </a>
-          <a href="/contact">
+          </Link>
+          <Link to="/contact">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
               CONTACT US
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 

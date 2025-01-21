@@ -110,7 +110,7 @@ export default function Permance() {
 
           <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
             <img
-              src={performancegen2}
+              src={performancegen}
               alt="Brand Building Concept"
               className="object-cover"
             />
@@ -185,7 +185,7 @@ export default function Permance() {
 
           <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
             <img
-              src={performancegen}
+              src={performancegen2}
               alt="Brand Building Concept"
               className="object-cover"
             />

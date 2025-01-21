@@ -11,6 +11,7 @@ import {
   Phone
 } from 'lucide-react';
 import whitelogo from "./components/fin-logo-2.png";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -38,10 +39,10 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-4 ml-10">COMPANY</h3>
           <ul className="space-y-3">
-            <li className="ml-10"><a href="/" className="hover:text-gray-300">Home</a></li>
-            <li className="ml-10"><a href="/about" className="hover:text-gray-300">About Us</a></li>
+            <li className="ml-10"><Link to="/" className="hover:text-gray-300">Home</Link></li>
+            <li className="ml-10"><Link to="/about" className="hover:text-gray-300">About Us</Link></li>
             {/* <li className="ml-10"><a href="#" className="hover:text-gray-300">Blog</a></li> */}
-            <li className="ml-10"><a href="/career" className="hover:text-gray-300">Career</a></li>
+            <li className="ml-10"><Link to="/career" className="hover:text-gray-300">Career</Link></li>
           </ul>
         </div>
 
@@ -49,12 +50,12 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-4">SERVICES</h3>
           <ul className="space-y-3">
-            <li><a href="/brand" className="hover:text-gray-300">Brand Sculpting</a></li>
-            <li><a href="/performance" className="hover:text-gray-300">Performance Marketing & Lead Gen</a></li>
-            <li><a href="/influencer" className="hover:text-gray-300">Influencer Marketing</a></li>
-            <li><a href="/ecommerce" className="hover:text-gray-300">E-Commerce Solution</a></li>
-            <li><a href="/marketplace" className="hover:text-gray-300">Marketplace Management</a></li>
-            <li><a href="/digital" className="hover:text-gray-300">Digital Arts</a></li>
+            <li><Link to="/brand" className="hover:text-gray-300">Brand Sculpting</Link></li>
+            <li><Link to="/performance" className="hover:text-gray-300">Performance Marketing & Lead Gen</Link></li>
+            <li><Link to="/influencer" className="hover:text-gray-300">Influencer Marketing</Link></li>
+            <li><Link to="/ecommerce" className="hover:text-gray-300">E-Commerce Solution</Link></li>
+            <li><Link to="/marketplace" className="hover:text-gray-300">Marketplace Management</Link></li>
+            <li><Link to="/digital" className="hover:text-gray-300">Digital Arts</Link></li>
           </ul>
         </div>
 
@@ -85,19 +86,19 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Social Links */}
           <div className="flex gap-6">
-            <a href="https://www.facebook.com/digitalpolaris" className="hover:text-gray-300"><Facebook className="w-5 h-5" /></a>
-            <a href="https://x.com/DigitalPolaris1" className="hover:text-gray-300"><Twitter className="w-5 h-5" /></a>
-            <a href="https://www.linkedin.com/company/digitalpolaris/" className="hover:text-gray-300"><Linkedin className="w-5 h-5" /></a>
-            <a href="https://www.instagram.com/digital_polaris/" className="hover:text-gray-300"><Instagram className="w-5 h-5" /></a>
+            <Link to="https://www.facebook.com/digitalpolaris" className="hover:text-gray-300"><Facebook className="w-5 h-5" /></Link>
+            <Link to="https://x.com/DigitalPolaris1" className="hover:text-gray-300"><Twitter className="w-5 h-5" /></Link>
+            <Link to="https://www.linkedin.com/company/digitalpolaris/" className="hover:text-gray-300"><Linkedin className="w-5 h-5" /></Link>
+            <Link to="https://www.instagram.com/digital_polaris/" className="hover:text-gray-300"><Instagram className="w-5 h-5" /></Link>
      
           </div>
 
           {/* Footer Links */}
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="/about" className="hover:text-gray-300">ABOUT US</a>
-            <a href="/contact" className="hover:text-gray-300">CONTACT US</a>
-            <a href="#" className="hover:text-gray-300">PRIVACY POLICY</a>
-            <a href="#" className="hover:text-gray-300">DISCLAIMER</a>
+            <Link to="/about" className="hover:text-gray-300">ABOUT US</Link>
+            <Link to="/contact" className="hover:text-gray-300">CONTACT US</Link>
+            <Link to="#" className="hover:text-gray-300">PRIVACY POLICY</Link>
+            <Link to="#" className="hover:text-gray-300">DISCLAIMER</Link>
           </div>
         </div>
 

@@ -12,6 +12,7 @@ import  i6 from "./components/i-6.png"
 import { ArrowRight, Mail, Phone, Facebook, Twitter, Linkedin, Instagram, Menu, X } from 'lucide-react';
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -121,14 +122,14 @@ const Service = () => {
         <div className="p-6">
           <h3 className="text-3xl text-left font-bold mb-3 font-use">{service.title}</h3>
           <p className="text-gray-600 mb-4">{service.description}</p>
-          <a href={service.link}>
+          <Link to={service.link}>
        <button
   className="bg-gray-900 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-orange-500 transition-colors flex-shrink-0"
    // Wrap in arrow function
 >
   VIEW <ArrowRight className="w-4 h-4" />
 </button>
-</a>
+</Link>
 
         </div>
       </motion.div>

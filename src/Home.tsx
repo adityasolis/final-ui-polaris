@@ -21,6 +21,7 @@ import implement from "./components/ENAGE ICONS-04.jpg"
 import hamburger from "./components/hamburger.png"
 import blacklogo from "./components/fin-logo.png"
 import whitelogo from "./components/fin-logo-2.png"
+import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom'
 import Footer from './Footer';
@@ -140,7 +141,7 @@ function Home() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-4 max-w-6xl mx-auto mt-20">
             {services.map((service, index) => (
-                <a href={service.link}>
+                <Link to={service.link}>
               <button 
                 key={index}
                 className="px-6 py-3 border-black rounded-full transition-colors duration-300 flex items-center gap-2 whitespace-nowrap"  style={{border : '1px solid black'}}
@@ -158,7 +159,7 @@ function Home() {
               >
                 {service.name} <ArrowRight className="w-4 h-4" />
               </button>
-              </a>
+              </Link>
             ))}
           </div>
           

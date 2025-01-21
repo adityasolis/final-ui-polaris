@@ -12,7 +12,7 @@ import blacklogo from "./components/black_white_logo.png"
 import whitelogo from "./components/logo-color.png"
 import performancegen from "./components/performance-gen.png"
 import performancegen2 from "./components/performance-gen-2.png"
-import ecommerce_sol from "./components/performance-gen-2.png"
+import ecommerce_sol from "./components/ecom-1.png"
 import ecommerce_sol2 from "./components/sol-2.png"
 
 // import { Button } from "@/components/ui/button"
@@ -143,7 +143,7 @@ export default function EcommercePage() {
           >
             {[
               {
-                title: "Platform Management::",
+                title: "Platform Management:",
                 content:
                   "We manage and maintain your e-commerce platform, ensuring smooth operations, optimal performance, and ongoing security updates.",
               },
