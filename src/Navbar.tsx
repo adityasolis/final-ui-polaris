@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
           <Link to="/service">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              SERVICES
+              SOLUTIONS
             </button>
           </Link>
           <Link to="/influencer">
@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
           <Link to="/career">
             <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              CAREER
+              CAREERS
             </button>
           </Link>
           <Link to="/contact">
