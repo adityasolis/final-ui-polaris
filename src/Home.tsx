@@ -147,7 +147,7 @@ function Home() {
         <section ref={headerRef} className="h-screen flex items-center justify-center bg-white px-10">
         <div className="text-center slide-in-bottom">
           <h1>
-            <div className="text-8xl md:text-8xl text-black tracking-tight font-use font-test">
+            <div className="text-8xl md:text-8xl text-black tracking-tight font-use font-test mt-20">
               SHAPING VISIONS, <br/> DELIVERING RESULTS
             </div>
             <div className="mt-8 text-lg md:text-2xl text-gray-600 max-w-4xl  text-center  hi-test "  style={{marginBottom : '250px' , marginLeft : '100px'}}>
