@@ -16,6 +16,7 @@ import performancegen2 from "./components/performance-gen-2.png"
 import hamburger from "./components/hamburger.png"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
+import { Link } from "react-router-dom"
 
 export default function Permance() {
 
@@ -56,7 +57,7 @@ export default function Permance() {
           >
                <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "10rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use font-performance" >
           Performance <br/> Marketing & lead gen
           </h1>
         </div>
@@ -118,9 +119,11 @@ export default function Permance() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600">
     Let's Create Your Brand Together →
   </button>
+  </Link>
 </div>
 
           </motion.div>
@@ -176,9 +179,11 @@ export default function Permance() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600 mt-10 mb-20">
     Let's Create Your Brand Together →
   </button>
+  </Link>
 </div>
 
           </motion.div>
@@ -199,8 +204,8 @@ export default function Permance() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-5xl font-bold mb-8 mt-20 ml-5 font-use">FAQ</h2>
-          <div className="space-y-8">
+          <h2 className="text-8xl font-bold mb-8 mt-20 ml-5 font-use">FAQ</h2>
+          <div className="space-y-2">
             {[
               {
                 question: "What key performance indicators (KPIs) do you track for lead generation campaigns?",
@@ -241,10 +246,12 @@ export default function Permance() {
             ))}
           </div>
         </motion.section>
+        <Link to="/contact">
         <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
       LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
+    </Link>
         
       </div>
       <Footer/>

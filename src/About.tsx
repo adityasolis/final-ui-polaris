@@ -15,7 +15,7 @@ import Footer from "./Footer";
 import blacklogo from "./components/fin-logo.png"
 import whitelogo from "./components/fin-logo-2.png"
 import Navbar from "./Navbar";
-
+import { Link } from "react-router-dom";
 const About = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const horizontalImages = [pic1, pic2, pic3, pic4, pic5, pic6];
@@ -28,7 +28,7 @@ const About = () => {
       {/* About Section */}
       <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "20rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use font-text-sol" >
             ABOUT US
           </h1>
         </div>
@@ -126,10 +126,12 @@ const About = () => {
       >
       </Parallax>
       <div className="container mx-auto ">
+        <Link to="/contact">
       <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
       LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
+    </Link>
   </div>
       <section >
 <Footer/>

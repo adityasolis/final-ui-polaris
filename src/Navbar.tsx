@@ -37,35 +37,36 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 h-full w-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
-        <div className="p-8 space-y-12 mt-20">
+        <div className="flex flex-col  justify-center h-full space-y-8">
           <Link to="/">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              HOME
+            <button className="block w-full  py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' , textAlign : 'right' ,  paddingRight : "12rem" }}>
+              Home
             </button>
           </Link>
           <Link to="/about">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              ABOUT US
+            <button className="block w-full text-center py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' ,  textAlign : 'right'  , paddingRight : "12rem" }}>
+              About Us
             </button>
           </Link>
           <Link to="/service">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              SOLUTIONS
+            <button className="block w-full text-center py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' ,  textAlign : 'right'  ,  paddingRight : "12rem" }}>
+              Solutions
             </button>
           </Link>
           <Link to="/influencer">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              INFLUENCER MARKETING
+            <button className="block w-full text-center py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' ,  textAlign : 'right' ,  paddingRight : "12rem" }}>
+              Influencer Marketing
+     
             </button>
           </Link>
           <Link to="/career">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              CAREERS
+            <button className="block w-full text-center py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' ,  textAlign : 'right' ,  paddingRight : "12rem" }}>
+              Careers
             </button>
           </Link>
           <Link to="/contact">
-            <button className="block w-full text-left py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "2.5rem", fontWeight: '600', marginBottom: '2rem' }}>
-              CONTACT US
+            <button className="block w-full text-center py-3 px-4 text-xl hover:text-orange-500 rounded-lg transition-colors" style={{ fontSize: "4.5rem", fontWeight: '600' ,  textAlign : 'right' ,  paddingRight : "12rem"  }}>
+              Contact Us
             </button>
           </Link>
         </div>

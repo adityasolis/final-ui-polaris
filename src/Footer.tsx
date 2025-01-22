@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="relative">
             <input
               type="email"
-              placeholder="ENTER EMAIL ADDRESS"
+              placeholder="SUBSCRIBE TO NEWSLETTER"
               className="w-full bg-transparent border border-white/40 rounded-full py-3 px-4 pr-12 text-sm"
             />
             <button className="absolute right-2 top-1/2 -translate-y-1/2">
@@ -37,18 +37,18 @@ const Footer = () => {
 
         {/* Company Links */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold mb-4 ml-10">COMPANY</h3>
+          <h3 className="text-lg font-semibold mb-4 footer-left">COMPANY</h3>
           <ul className="space-y-3">
-            <li className="ml-10"><Link to="/" className="hover:text-gray-300">Home</Link></li>
-            <li className="ml-10"><Link to="/about" className="hover:text-gray-300">About Us</Link></li>
+            <li className="footer-left"><Link to="/" className="hover:text-gray-300">Home</Link></li>
+            <li className="footer-left"><Link to="/about" className="hover:text-gray-300">About Us</Link></li>
             {/* <li className="ml-10"><a href="#" className="hover:text-gray-300">Blog</a></li> */}
-            <li className="ml-10"><Link to="/career" className="hover:text-gray-300">Career</Link></li>
+            <li className="footer-left"><Link to="/career" className="hover:text-gray-300">Career</Link></li>
           </ul>
         </div>
 
         {/* Services Links */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold mb-4">SERVICES</h3>
+          <h3 className="text-lg font-semibold mb-4">SOLUTIONS</h3>
           <ul className="space-y-3">
             <li><Link to="/brand" className="hover:text-gray-300">Brand Sculpting</Link></li>
             <li><Link to="/performance" className="hover:text-gray-300">Performance Marketing & Lead Gen</Link></li>
@@ -97,8 +97,8 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link to="/about" className="hover:text-gray-300">ABOUT US</Link>
             <Link to="/contact" className="hover:text-gray-300">CONTACT US</Link>
-            <Link to="#" className="hover:text-gray-300">PRIVACY POLICY</Link>
-            <Link to="#" className="hover:text-gray-300">DISCLAIMER</Link>
+            {/* <Link to="#" className="hover:text-gray-300">PRIVACY POLICY</Link> */}
+            {/* <Link to="#" className="hover:text-gray-300">DISCLAIMER</Link> */}
           </div>
         </div>
 

@@ -18,7 +18,7 @@ const Career = () => {
        <Navbar/>
             <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "20rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use font-text-sol" >
             CAREERS
           </h1>
         </div>

@@ -238,3 +238,91 @@ section::before {
   transition: 0.5s;
 }
 
+
+
+.font-text-home{
+  font-size: 20rem; /* Default size for larger screens */
+}
+
+.font-text-sol {
+  font-size: 20rem; /* Default size for larger screens */
+}
+.brand-text {
+  font-size: 16rem; /* Default size for larger screens */
+}
+.point-font{
+  font-size : 2rem;
+}
+
+.footer-left{
+  margin-left: 30px;
+}
+.footer-text-influencer{
+  font-size: 18rem;
+}
+.footer-text-marketplace{
+  font-size: 14rem;
+}
+
+.font-performance{
+  font-size : 10rem
+}
+
+.font-test{
+  font-size: 12rem !important;
+}
+
+.height-services{
+  height : 0rem
+}
+.font-ecomm{
+  font-size : 15rem
+}
+
+
+@media (max-width: 768px) {
+  .font-text {
+    font-size: 6rem; /* Smaller size for phone screens */
+    margin-top: 60%;
+  }
+  .font-text-sol {
+    font-size: 8rem; /* Default size for larger screens */
+  }
+  .font-ecomm{
+    font-size : 5rem
+  }
+  .footer-text-marketplace{
+    font-size: 5rem;
+  }
+  
+  .point-font{
+    font-size : 1.3rem;
+  }
+  .font-texts-sol {
+    font-size: 2rem; /* Default size for larger screens */
+  }
+  .footer-left{
+    margin-left: 0px;
+  }
+  .font-performance{
+    font-size : 5rem
+  }
+  .font-test{
+    font-size: 7rem !important;
+    margin-top : 4rem
+  }
+  .hi-test{
+    margin-left: 10px !important;
+  }
+  
+  .height-services{
+    height : 13rem
+  }
+  .footer-text-influencer{
+   font-size:  6rem;
+  }
+  .brand-text {
+    font-size: 7rem; /* Default size for larger screens */
+  }
+  
+}

@@ -14,6 +14,7 @@ import whitelogo from "./components/logo-color.png"
 import hamburger from "./components/hamburger.png"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import { Link } from "react-router-dom"
 
 export default function BrandSculptingPage() {
 
@@ -54,7 +55,7 @@ export default function BrandSculptingPage() {
           >
                <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "16rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use brand-text">
             BRAND SCULPTING
           </h1>
         </div>
@@ -111,6 +112,7 @@ export default function BrandSculptingPage() {
           <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
             <img
               src={about}
+              
               alt="Brand Building Concept"
               className="object-cover"
             />
@@ -118,9 +120,11 @@ export default function BrandSculptingPage() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600">
     Let's Create Your Brand Together →
   </button>
+  </Link>
 </div>
 
           </motion.div>
@@ -224,9 +228,12 @@ export default function BrandSculptingPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600 mt-10">
     Let's Create Your Brand Together →
   </button>
+  </Link>
+
 </div>
 
           </motion.div>
@@ -239,8 +246,8 @@ export default function BrandSculptingPage() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-5xl font-bold mb-8 mt-20 ml-5 font-use">FAQ</h2>
-          <div className="space-y-8">
+          <h2 className="text-8xl font-bold mb-8 mt-20 ml-5 font-use">FAQ</h2>
+          <div className="space-y-2">
             {[
               {
                 question: "What do you mean by brand building?",

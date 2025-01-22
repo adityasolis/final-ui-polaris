@@ -90,7 +90,7 @@ const Service = () => {
         >
         <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "20rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use font-text-sol" >
        SOLUTIONS
           </h1>
         
@@ -113,11 +113,13 @@ const Service = () => {
         className="group relative overflow-hidden rounded-lg"
       >
         <div className="aspect-[4/3] relative overflow-hidden">
+        <Link to={service.link}>
           <img
             src={service.image || "/placeholder.svg"}
             alt={service.alt}
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
+          </Link>
         </div>
         <div className="p-6">
           <h3 className="text-3xl text-left font-bold mb-3 font-use">{service.title}</h3>
@@ -144,10 +146,12 @@ const Service = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
+            <Link to="/contact">
         <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
       LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
+    </Link>
           </motion.section>
         </motion.div>
 

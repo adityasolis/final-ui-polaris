@@ -12,7 +12,29 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   type = 'vertical'
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleSlides = 3;
+  const [visibleSlides, setVisibleSlides] = useState(1);
+
+  useEffect(() => {
+    const updateVisibleSlides = () => {
+      // Update number of visible slides based on screen width
+      if (window.innerWidth <= 640) {
+        setVisibleSlides(1); // 1 slide on small screens
+      } else if (window.innerWidth <= 768) {
+        setVisibleSlides(2); // 2 slides on medium screens
+      } else {
+        setVisibleSlides(3); // 3 slides on larger screens
+      }
+    };
+
+    // Call the function on resize
+    updateVisibleSlides();
+    window.addEventListener('resize', updateVisibleSlides);
+
+    // Clear the event listener on cleanup
+    return () => {
+      window.removeEventListener('resize', updateVisibleSlides);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,12 +44,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     }, autoSlideInterval);
 
     return () => clearInterval(interval);
-  }, [images.length, autoSlideInterval]);
+  }, [images.length, autoSlideInterval, visibleSlides]);
 
   const renderDots = () => {
     const totalDots = images.length - visibleSlides + 1;
     const dots = [];
-    for (let i = 0; i < totalDots -1; i++) {
+    for (let i = 0; i < totalDots; i++) {
       dots.push(
         <button
           key={i}

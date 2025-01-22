@@ -16,7 +16,7 @@ import Influencers from "./components/influencer_marketing.png"
 import influence1 from "./components/influence1.png"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
-
+import { Link } from "react-router-dom"
 export default function Influencer() {
 
   // Refs for scroll containers
@@ -56,7 +56,7 @@ export default function Influencer() {
           >
                <section className="text-black py-20 text-center min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bold text-center mb-8 font-use" style={{ fontSize: "18rem" }}>
+          <h1 className="text-6xl font-bold text-center mb-8 font-use footer-text-influencer" >
           INFLUENCER  <br/> MARKETING
           </h1>
         </div>
@@ -118,9 +118,11 @@ export default function Influencer() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600">
     Let's Create Your Brand Together →
   </button>
+  </Link>
 </div>
 
           </motion.div>
@@ -196,6 +198,32 @@ export default function Influencer() {
 </div>
 
           </motion.div>
+          <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"
+        >
+          <h2 className="text-5xl font-bold mb-12 text-left font-use">
+            Influencer Marketing That Converts
+          </h2>
+          <div className="space-y-8 text-left text-xl leading-relaxed text-gray-700">
+            <p style={{fontSize : '1.3rem'}}>
+              Imagine your brand's message echoing through the voices of influencers who truly resonate with your audience. 
+              With a dynamic network of 100+ creators across diverse industries, we create authentic partnerships that spark 
+              conversations, set trends, and drive unstoppable growth.
+            </p>
+            <p style={{fontSize : '1.3rem'}}>
+              We amplify your brand through powerful storytelling, seamlessly weaving it into the fabric of social media. 
+              Every post, every mention, and every engagement transforms followers into devoted advocates and casual 
+              scrollers into lifelong customers.
+            </p>
+            <p  style={{fontSize : '1.3rem'}} className="font-semibold text-gray-900">
+              Welcome to the future of influencer marketing—where creativity meets data, and real connections spark 
+              extraordinary success.
+            </p>
+          </div>
+        </motion.section>
 
         {/* FAQ Section with Parallax */}
         <motion.section
@@ -205,8 +233,8 @@ export default function Influencer() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-5xl font-bold mb-8 mt-20 ml-5 font-use">FAQ</h2>
-          <div className="space-y-8">
+          <h2 className="text-8xl font-bold mb-8  ml-5 font-use">FAQ</h2>
+          <div className="space-y-2">
             {[
               {
                 question: "How do you select the right influencers for my brand?",
@@ -247,10 +275,12 @@ export default function Influencer() {
             ))}
           </div>
         </motion.section>
+        <Link to="/contact">
         <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >
       LET'S CONNECT
       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
     </h2>
+    </Link>
         
 
         

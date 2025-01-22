@@ -20,11 +20,11 @@ const JobCard = ({ title, description }: { title: string; description: string })
 const JobListings = () => {
   const jobs = [
     {
-      title: 'DIGITAL MARKETING EXPERT',
+      title: 'SEO EXECUTIVE',
       description: 'We are looking for a creative and results-driven Digital Marketing Expert to elevate our online presence and drive growth. If you\'re passionate about crafting innovative strategies, analyzing data, and achieving measurable results, we want you!'
     },
     {
-      title: 'GRAPHIC DESIGNER',
+      title: 'MOTION GRAPHIC DESIGNER',
       description: 'We\'re on the lookout for a talented and innovative Graphic Designer to bring fresh ideas to life and create visually stunning designs. If you have a passion for design, creativity, and attention to detail, we want you!'
     },
     {
