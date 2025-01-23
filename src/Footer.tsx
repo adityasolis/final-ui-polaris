@@ -74,7 +74,7 @@ const Footer = () => {
             <a href="https://maps.app.goo.gl/LQRsDwXDfaQEntS46" target="_blank">
           <div className="flex items-start gap-3">
             <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-            <p>Corporate Office : Ground Floor, Plot No 127, Sector 44, Gurugram, Haryana 122003</p>
+            <p>Corporate Office : Ground Floor, Plot No 127, Sector 44, Gurugram, HR 122003 , INDIA</p>
           </div>
           </a>
          
