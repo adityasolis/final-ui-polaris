@@ -192,9 +192,11 @@ export default function Influencer() {
          
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
+            <Link to="/contact">
   <button className="bg-gray-900 text-white text-center rounded-full px-12 py-4 hover:bg-orange-600 mt-10">
     Let's Get Started →
   </button>
+  </Link>
 </div>
 
           </motion.div>
