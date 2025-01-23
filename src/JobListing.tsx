@@ -20,8 +20,8 @@ const JobCard = ({ title, description }: { title: string; description: string })
 const JobListings = () => {
   const jobs = [
     {
-      title: 'SEO EXECUTIVE',
-      description: 'We are looking for a creative and results-driven Digital Marketing Expert to elevate our online presence and drive growth. If you\'re passionate about crafting innovative strategies, analyzing data, and achieving measurable results, we want you!'
+      title: 'PERFORMANCE MARKETING SPECIALIST',
+      description: 'Experienced Performance Marketing Specialist skilled in managing high-budget Google Ads and Meta Ads campaigns, optimizing performance with automation tools, tracking systems, and data analysis, while ensuring accurate reporting, troubleshooting, and maximizing ROI through strategic adjustments.'
     },
     {
       title: 'MOTION GRAPHIC DESIGNER',

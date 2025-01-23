@@ -10,6 +10,7 @@ import Navbar from './Navbar';
 const CareerInfo = () => {
   const [title, setTitle] = useState('');
   const [responsibilities, setResponsibilities] = useState<string[]>([]);
+  const [profile, setProfile] = useState('')
   const [logo, setLogo] = useState(blacklogo);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [name, setName] = useState('');
@@ -25,7 +26,8 @@ const CareerInfo = () => {
     const jobId = params.get('jd');
 
     if (jobId === 'CONTENT WRITER') {
-      setTitle('Content Writer');
+      setTitle('CONTENT WRITER');
+      setProfile("We are seeking a creative Content Writer with 3-4 years of experience, ideally in digital marketing. The candidate should have a Bachelor's degree in English, Journalism, Marketing, or a related field, and proficiency in CMS. Strong writing, editing, and SEO skills are essential, along with excellent organizational abilities and the capability to work independently and as part of a team.")
       setResponsibilities([
         'Content Creation: Write, edit, and proofread high-quality content for various platforms including websites, blogs, social media, email campaigns, and marketing collateral.',
         'Research: Conduct thorough research on industry-related topics to generate original content and ensure accuracy and credibility.',
@@ -37,7 +39,8 @@ const CareerInfo = () => {
         'Analytics: Monitor content performance using analytics tools and adjust strategies to improve engagement and conversion rates.'
       ]);
     } else if (jobId === 'MOTION GRAPHIC DESIGNER') {
-      setTitle('Motion Graphic Designer');
+      setTitle('MOTION GRAPHIC DESIGNER');
+      setProfile("We are looking for a Graphic Designer cum Video Editor with 5-6 years of experience. The ideal candidate should have a Bachelor's in Graphic Design (or equivalent) and proficiency in AI Tools and Adobe Creative Suite (Photoshop, Illustrator, InDesign, Canva, Filmora). A strong portfolio and excellent communication and time management skills are required. The ability to work independently and in a fast-paced environment is essential.")
       setResponsibilities([
         'Collaborate with the marketing and creative teams to develop design concepts.',
         'Create compelling and visually appealing graphics that align with brand guidelines.',
@@ -47,17 +50,26 @@ const CareerInfo = () => {
         'Amend designs based on feedback and make revisions as necessary.',
         'Stay up-to-date with industry trends and best practices in graphic design and digital media.',
       ]);
-    } else if (jobId === 'SEO EXECUTIVE') {
-      setTitle('Seo Executive');
+    } else if (jobId === 'PERFORMANCE MARKETING SPECIALIST') {
+      setTitle('PERFORMANCE MARKETING SPECIALIST');
+      setProfile('We are looking for a Performance Marketing Specialist with 5-6 years of experience in managing high-budget campaigns on Google Ads and Meta Ads. The ideal candidate should be proficient in Google Tag Manager, Google Analytics, Facebook Pixel, automation tools, and tracking techniques. Strong analytical skills and experience with tools like Google Data Studio and Excel are required. Google Ads and Facebook Blueprint certifications are a plus. The role requires excellent problem-solving, data communication, and campaign management skills.');
       setResponsibilities([
-        'Conduct thorough keyword research to identify opportunities for content optimization and growth.',
-        'Optimize website content, including landing pages, blog posts, and product descriptions, for targeted keywords.',
-        'Implement on-page SEO strategies, including meta tags, headers, and internal linking structures.',
-        'Analyze website performance using tools such as Google Analytics, Google Search Console, and other SEO tools to track KPIs and measure success',
-        'Collaborate with content creators to develop SEO-friendly content and ensure alignment with best practices.',
-        'Stay updated on industry trends, algorithm updates, and emerging SEO technologies to ensure strategies are current and effective.',
-        "Monitor competitors' SEO strategies and performance to identify areas for improvement.",
-        'Generate regular reports on SEO performance, highlighting key insights and recommendations for optimization.'  
+        'Set up, configure, and manage high-budget campaigns on Google Ads and Meta Ads, ensuring technical accuracy in tracking, targeting, bidding, and reporting.',
+        'Use scripts and automation tools (e.g., Google Ads Scripts, Facebook Automated Rules) to streamline campaign management processes.',
+        'Implement and maintain tracking codes, pixels, and conversion tracking for Google Ads and Meta Ads to ensure data accuracy.',
+        'Integrate Google Tag Manager (GTM), Google Analytics, and other tracking platforms to streamline data flows and improve reporting accuracy.',
+        'Troubleshoot and debug tracking or conversion issues, ensuring that all campaign data is captured correctly.',
+        'Use tools like Google Analytics, Google Data Studio, and Tableau to build customized performance reports and dashboards for clients and internal teams.',
+        "Analyze campaign performance, identify technical bottlenecks, and make recommendations for campaign adjustments.",
+        'Dive deep into campaign metrics (CPC, CPA, ROAS, and others) to make data-driven decisions for optimization.'  ,
+        'Implement advanced automation techniques within Google Ads, Meta Ads, and Google Analytics to reduce manual tasks and enhance optimization efforts.'  ,
+        'Develop and maintain automated workflows for campaign optimizations, reporting, and bid adjustments.'  ,
+        'Collaborate with the marketing and creative teams to ensure that campaign designs are implemented correctly and meet performance goals.'   ,
+        'Work with client-facing teams to translate technical metrics into actionable insights and recommendations.',
+        'Conduct A/B testing of ad creatives, landing pages, and audience segments to continuously improve performance.',
+        'Optimize campaigns for budget allocation, targeting, and bidding based on performance data.',
+        'Ensure the proper configuration of Google Ads, Meta Ads Manager, and other advertising platforms.',
+        'Troubleshoot any issues related to campaign delivery, ad approval, or budget discrepancies.'
       ]);
     }
   }, [location.search]);
@@ -111,12 +123,21 @@ const CareerInfo = () => {
           <h2 className="text-4xl text-center mb-16">{title}</h2>
 
           <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-6">PROFILE SUMMARY</h3>
+            <p className="text-xl">
+        
+ {profile}
+ </p>
+
+          </div>
+
+          <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-6">KEY RESPONSIBILITY AREA (KRA)</h3>
-            <ul className="space-y-4">
-              {responsibilities.map((item, index) => (
-                <li key={index} className="text-lg">{item}</li>
-              ))}
-            </ul>
+            <ul className="list-disc space-y-4 pl-5">
+  {responsibilities.map((item, index) => (
+    <li key={index} className="text-lg">{item}</li>
+  ))}
+</ul>
           </div>
 
           {/* Application Form */}

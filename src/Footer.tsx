@@ -29,8 +29,9 @@ const Footer = () => {
               placeholder="SUBSCRIBE TO NEWSLETTER"
               className="w-full bg-transparent border border-white/40 rounded-full py-3 px-4 pr-12 text-sm"
             />
-            <button className="absolute right-2 top-1/2 -translate-y-1/2">
+            <button className="absolute right-2 top-1/2 -translate-y-1/2" onClick={()=>{alert('You have been Subscribed to our news Letter')}}>
               <ArrowRight className="w-5 h-5" />
+              
             </button>
           </div>
         </div>
@@ -61,19 +62,22 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="space-y-4">
+
+        <a href="https://maps.app.goo.gl/9JnhnLFru4TJp5Uq9" target="_blank">
+          <div className="flex items-start gap-3">
+            <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+            <p>Head Office : 253 S Broadway, Hicksville, NY 11801, USA</p>
+          </div>
+          </a>
+          <br/>
+
             <a href="https://maps.app.goo.gl/LQRsDwXDfaQEntS46" target="_blank">
           <div className="flex items-start gap-3">
             <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
             <p>Corporate Office : Ground Floor, Plot No 127, Sector 44, Gurugram, Haryana 122003</p>
           </div>
           </a>
-          <br/>
-          <a href="https://maps.app.goo.gl/9JnhnLFru4TJp5Uq9" target="_blank">
-          <div className="flex items-start gap-3">
-            <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-            <p>Head Office : 253 S Broadway, Hicksville, NY, United States, New York</p>
-          </div>
-          </a>
+         
           <br/>
           <a href="mailto:info@digitalpolaris.com">
           <div className="flex items-center gap-3">
