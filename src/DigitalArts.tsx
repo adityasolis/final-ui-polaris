@@ -160,9 +160,14 @@ export default function DigitalArts() {
                   "Explore the possibilities of AI-powered graphic design tools to generate unique and innovative visual concepts.",
               },
               {
-                title: "AI Videos::",
+                title: "AI Videos:",
                 content:
                   "Create stunning and engaging AI-powered videos, including animations, motion graphics, and deepfakes.",
+              },
+              {
+                title: "Visual Effects:",
+                content:
+                  "Bring your creative vision to life with stunning visual effects, from subtle enhancements to mind-blowing special effects.",
               },
             ].map((service, index) => (
               <motion.div
