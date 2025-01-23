@@ -79,19 +79,20 @@ const Footer = () => {
           </a>
          
           <br/>
-          <a href="mailto:info@digitalpolaris.com">
-          <div className="flex items-center gap-3">
-            <Mail className="w-5 h-5 flex-shrink-0" />
-            <p>Email: info@digitalpolaris.com</p>
-          </div>
-          </a>
-          <br/>
           <a href="tel:+919654160160">
           <div className="flex items-center gap-3">
             <Phone className="w-5 h-5 flex-shrink-0" />
             <p>Phone: +91 9654160160</p>
           </div>
           </a>
+          <br/>
+          <a href="mailto:info@digitalpolaris.com">
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 flex-shrink-0" />
+            <p>Email: info@digitalpolaris.com</p>
+          </div>
+          </a>
+       
         </div>
       </div>
 
