@@ -61,18 +61,33 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="space-y-4">
+            <a href="https://maps.app.goo.gl/LQRsDwXDfaQEntS46" target="_blank">
           <div className="flex items-start gap-3">
             <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-            <p>Head Office : Ground Floor, Plot No 127, Sector 44, Gurugram, Haryana 122003</p>
+            <p>Corporate Office : Ground Floor, Plot No 127, Sector 44, Gurugram, Haryana 122003</p>
           </div>
+          </a>
+          <br/>
+          <a href="https://maps.app.goo.gl/9JnhnLFru4TJp5Uq9" target="_blank">
+          <div className="flex items-start gap-3">
+            <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+            <p>Head Office : 253 S Broadway, Hicksville, NY, United States, New York</p>
+          </div>
+          </a>
+          <br/>
+          <a href="mailto:info@digitalpolaris.com">
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 flex-shrink-0" />
             <p>Email: info@digitalpolaris.com</p>
           </div>
+          </a>
+          <br/>
+          <a href="tel:+919654160160">
           <div className="flex items-center gap-3">
             <Phone className="w-5 h-5 flex-shrink-0" />
             <p>Phone: +91 9654160160</p>
           </div>
+          </a>
         </div>
       </div>
 
