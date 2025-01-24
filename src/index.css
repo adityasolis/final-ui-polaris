@@ -286,13 +286,13 @@ section::before {
     margin-top: 60%;
   }
   .font-text-sol {
-    font-size: 8rem; /* Default size for larger screens */
+    font-size: 6rem; /* Default size for larger screens */
   }
   .font-ecomm{
     font-size : 5rem
   }
   .footer-text-marketplace{
-    font-size: 5rem;
+    font-size: 4rem;
   }
   
   .point-font{
@@ -305,24 +305,25 @@ section::before {
     margin-left: 0px;
   }
   .font-performance{
-    font-size : 5rem
+    font-size : 4rem
   }
   .font-test{
     font-size: 7rem !important;
-    margin-top : 4rem
+    margin-top : 8rem
   }
   .hi-test{
     margin-left: 10px !important;
+    
   }
   
   .height-services{
     height : 13rem
   }
   .footer-text-influencer{
-   font-size:  6rem;
+   font-size:  5rem;
   }
   .brand-text {
-    font-size: 7rem; /* Default size for larger screens */
+    font-size: 6rem; /* Default size for larger screens */
   }
   
 }

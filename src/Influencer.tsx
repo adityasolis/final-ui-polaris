@@ -108,13 +108,25 @@ export default function Influencer() {
             </ul>
           </motion.div>
 
-          <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={Influencers}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
+          
+        <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={Influencers}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={Influencers}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
@@ -181,13 +193,25 @@ export default function Influencer() {
           </motion.div>
         </motion.section>
 
-        <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={influence1}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
+     
+        <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={influence1}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={influence1}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
 
          
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>

@@ -114,13 +114,25 @@ export default function Marketplace() {
             </ul>
           </motion.div>
 
-          <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={marketplace1}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
+          <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={marketplace1}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={marketplace1}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
+
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
@@ -182,13 +194,25 @@ export default function Marketplace() {
           </motion.div>
         </motion.section>
 
-        <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={marketplace2}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
+        <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={marketplace2}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={marketplace2}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
+
 
          
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>

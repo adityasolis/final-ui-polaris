@@ -147,10 +147,10 @@ function Home() {
         <section ref={headerRef} className="h-screen flex items-center justify-center bg-white px-10">
         <div className="text-center slide-in-bottom">
           <h1>
-            <div className="text-8xl md:text-8xl text-black tracking-tight font-use font-test mt-20">
-              SHAPING VISIONS, <br/> DELIVERING RESULTS
-            </div>
-            <div className="mt-8 text-lg md:text-2xl text-gray-600 max-w-4xl  text-center  hi-test "  style={{marginBottom : '250px' , marginLeft : '100px'}}>
+          <div className="text-5xl sm:text-xl md:text-7xl lg:text-8xl text-black tracking-tight font-use font-test mt-30">
+  SHAPING VISIONS, <br/> DELIVERING RESULTS
+</div>
+            <div className=" text-lg md:text-2xl text-gray-600 max-w-4xl  text-center  hi-test "  style={{marginBottom : '250px' , marginLeft : '100px' }}>
               We <span className="font-bold text-black">CREATE</span> brands, <span className="font-bold text-black">PRESERVE</span> unique identity, <span className="font-bold text-black">TRANSFORM</span> your business.
             </div>
           </h1>
@@ -235,14 +235,14 @@ function Home() {
                   className="w-full h-42 md:h-50 object-cover rounded-lg"
                   loading="lazy"
                 />
-            <div  className="space-y-40 sm:space-y-20 md:space-y-20">
-              {impactPoints.map((point, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-black rounded-full flex-shrink-0"  />
-                  <p className="text-sm md:text-base " style={{fontSize : "1.5rem"}}>{point}</p>
-                </div>
-              ))}
-            </div>
+          <div className="space-y-8 sm:space-y-12 md:space-y-20">
+  {impactPoints.map((point, index) => (
+    <div key={index} className="flex items-center gap-2">
+      <div className="w-2 h-2 bg-black rounded-full flex-shrink-0" />
+      <p className="text-base sm:text-lg md:text-[1.5rem]">{point}</p>
+    </div>
+  ))}
+</div>
           </div>
         </section>
 

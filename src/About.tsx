@@ -14,8 +14,10 @@ import group from "./components/BB.jpg";
 import Footer from "./Footer";
 import blacklogo from "./components/fin-logo.png"
 import whitelogo from "./components/fin-logo-2.png"
+import parallex from "./components/parallex-final-about.png"
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import about2 from "./components/about-2.png"
 const About = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const horizontalImages = [pic1, pic2, pic3, pic4, pic5, pic6];
@@ -36,12 +38,19 @@ const About = () => {
 
       {/* Parallax with Background Image */}
       <Parallax
-        blur={0}
-        bgImage={AboutUs}
-        strength={200}
-        className="h-[600px] relative" // Reduced from 1000px to 600px
-      >
-      </Parallax>
+    blur={0}
+    bgImage={AboutUs}
+    strength={200}
+    className="hidden md:block h-[600px]"
+  />
+  
+  {/* Mobile/Tablet Image */}
+  <Parallax
+    blur={0}
+    bgImage={parallex}
+    strength={200}
+    className="block md:hidden h-[400px]"
+  />
 
       {/* Content Section with Parallax Effect */}
       <Parallax strength={150} className="bg-white">
@@ -119,12 +128,20 @@ const About = () => {
 
       {/* Final Parallax Section */}
       <Parallax
-        blur={0}
-        bgImage={group}
-        strength={200}
-        className="h-[800px] relative"
-      >
-      </Parallax>
+    blur={0}
+    bgImage={group}
+    strength={200}
+    className="hidden md:block h-[600px]"
+  />
+  
+  {/* Mobile/Tablet Image */}
+  <Parallax
+    blur={0}
+    bgImage={about2}
+    strength={200}
+    className="block md:hidden h-[400px]"
+  />
+
       <div className="container mx-auto ">
         <Link to="/contact">
       <h2 className="text-8xl font-bold text-left mb-24  relative group font-use" >

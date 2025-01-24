@@ -12,9 +12,11 @@ import blacklogo from "./components/black_white_logo.png"
 import whitelogo from "./components/logo-color.png"
 // import { Button } from "@/components/ui/button"
 import hamburger from "./components/hamburger.png"
+import phonebrand from "./components/phone_brand.png"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import { Link } from "react-router-dom"
+import brand2 from "./components/brand-2.png"
 
 export default function BrandSculptingPage() {
 
@@ -109,15 +111,24 @@ export default function BrandSculptingPage() {
             </ul>
           </motion.div>
 
-          <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={about}
-              
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
-
+          <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={phonebrand}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={about}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
           <div className="flex justify-center items-center ">
             <Link to="/contact">
@@ -178,13 +189,24 @@ export default function BrandSculptingPage() {
           </motion.div>
         </motion.section>
 
-        <motion.div style={{ scale: imageScale }} className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-            <img
-              src={brandmid}
-              alt="Brand Building Concept"
-              className="object-cover"
-            />
-          </motion.div>
+        <motion.div 
+      style={{ scale: imageScale }} 
+      className="relative h-[400px] mb-8 rounded-lg overflow-hidden"
+    >
+      {/* Mobile image (default) */}
+      <img
+        src={brand2}
+        alt="Brand Building Concept - Mobile"
+        className="object-cover w-full h-full md:hidden"
+      />
+      
+      {/* Tablet and desktop image */}
+      <img
+        src={brandmid}
+        alt="Brand Building Concept - Desktop"
+        className="hidden md:block object-cover w-full h-full"
+      />
+    </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
