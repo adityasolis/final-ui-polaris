@@ -97,7 +97,7 @@ export default function Marketplace() {
             <h3 className="font-bold text-xl"   style={{fontSize : '1.3rem'}}>Why it Matters ?</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li style={{fontSize : '1.3rem'}}>
-                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Increased Sales & Revenu:</span> -  Tap into a massive customer base and significantly boost your online sales.
+                <span className="font-semibold" style={{fontSize : '1.3rem'}}>Increased Sales & Revenue:</span> -  Tap into a massive customer base and significantly boost your online sales.
               </li>
               <li style={{fontSize : '1.3rem'}}>
                 <span className="font-semibold" style={{fontSize : '1.3rem'}}>Enhanced Brand Visibility</span> -   Gain greater visibility and brand awareness within your target market.
