@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://digitalpolaris.com/sitemap.xml
