@@ -155,7 +155,7 @@ export default function BrandSculptingPage() {
           >
             {[
               {
-                title: "Search Engine Optimization (SEO) : ",
+                title: "Search Engine Optimization (SEO)",
                 content:
                   "We offer professional SEO services to boost your online presence with tailored SEO service packages. Our strategies include comprehensive keyword research, technical optimization, keyword research, and link building.",
               },
