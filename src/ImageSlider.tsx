@@ -13,26 +13,30 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(1);
+  const [totalDots, setTotalDots] = useState(2); // Default is 2 for desktop
 
   useEffect(() => {
-    const updateVisibleSlides = () => {
+    const updateSliderSettings = () => {
       // Update number of visible slides based on screen width
       if (window.innerWidth <= 640) {
         setVisibleSlides(1); // 1 slide on small screens
+        setTotalDots(1); // 1 dot on small screens
       } else if (window.innerWidth <= 768) {
         setVisibleSlides(2); // 2 slides on medium screens
+        setTotalDots(2); // 2 dots on medium screens
       } else {
         setVisibleSlides(3); // 3 slides on larger screens
+        setTotalDots(2); // 2 dots on larger screens
       }
     };
 
     // Call the function on resize
-    updateVisibleSlides();
-    window.addEventListener('resize', updateVisibleSlides);
+    updateSliderSettings();
+    window.addEventListener('resize', updateSliderSettings);
 
     // Clear the event listener on cleanup
     return () => {
-      window.removeEventListener('resize', updateVisibleSlides);
+      window.removeEventListener('resize', updateSliderSettings);
     };
   }, []);
 
@@ -47,7 +51,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   }, [images.length, autoSlideInterval, visibleSlides]);
 
   const renderDots = () => {
-    const totalDots = images.length - visibleSlides + 1;
     const dots = [];
     for (let i = 0; i < totalDots; i++) {
       dots.push(
