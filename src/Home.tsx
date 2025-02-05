@@ -266,6 +266,76 @@ function Home() {
           </div>
         </section>
 
+        {/* FAQ Section  */}
+        <section className="mb-24">
+  <h2 className="text-8xl font-bold mb-8 mt-20 ml-20 font-use">FAQ</h2>
+  <div className="space-y-2 ml-14">
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      What is a Digital Marketing Service?
+      </h3>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      A Digital Marketing Service refers to a range of online strategies and techniques used to promote a business, brand, or product on digital platforms. These services include Search Engine Optimization (SEO), Pay-Per-Click (PPC) advertising, Social Media Marketing (SMM), Content Marketing, Email Marketing, and more. The goal is to increase online visibility, drive traffic, performance & lead generation, and improve conversions by leveraging digital channels like search engines, social media, websites, and email.
+      </p>
+    </div>
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      What is Content Marketing Services?
+      </h3>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      Content marketing services involve creating, distributing, and optimizing valuable, relevant, and engaging content to attract and retain a target audience. These services typically include blog writing, SEO content, social media content, email marketing, video production, whitepapers, and more.<br/><br/>
+      The goal is to build brand awareness, drive organic traffic, generate leads, and establish authority in a specific industry. Effective content marketing focuses on providing informative and useful content rather than direct sales, helping businesses nurture customer relationships and increase conversions over time.
+      </p>
+    </div>
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      Why Should You Hire a Digital Marketing Agency?
+      </h3>
+      <ol  className="text-gray-600 list-decimal ml-8" type="1" style={{fontSize: "1.5rem" }}>
+        <li><strong>Expertise and Experience:</strong> Digital marketing agencies in India have specialized knowledge and experience in various online marketing strategies like SEO, PPC, social media, and content marketing.
+      </li>
+      <li><strong>Time-Saving:</strong> Outsourcing to an agency allows you to focus on your core business while experts handle your digital marketing efforts
+      </li>
+      <li><strong>Access to Tools and Resources:</strong>Agencies use advanced tools and analytics to optimize campaigns and track performance, which may be costly or complex for in-house teams to manage.
+      </li>
+      <li><strong>Scalability:</strong> Agencies can scale your digital marketing efforts as your business grows, ensuring that your marketing strategies align with your evolving needs.
+      </li>
+      <li><strong>Fresh Perspective:</strong> A digital marketing company can offer the best fresh ideas and insights, helping you stay ahead of trends and competitors in a rapidly changing online landscape.
+      </li>
+      </ol>
+    </div>
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      How do Brand Sculpting, Lead Generation, Digital Arts, Marketplace Management, and E-Commerce Solutions help businesses grow?
+      </h3>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      These services work together to strengthen a brand’s presence and drive sales. Brand Sculpting refines identity and messaging, Lead Generation attracts and converts potential customers, Digital Arts enhances visual appeal, Marketplace Management optimizes sales on platforms like Amazon and Flipkart, and E-Commerce Solutions ensure smooth online store operations. Combined, they improve visibility, engagement, and business growth.
+      </p>
+    </div>
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      Why Choose Digital Polaris for Your Digital Marketing?
+      </h3>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      Digital Polaris is a results-driven digital marketing agency specializing in SEO services, social media services, content creation, and PPC services. Their expert team creates tailored strategies that boost your online presence and drive measurable results.<br></br>
+      </p>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      By partnering with Digital Polaris, you save time and resources, as they handle all your marketing needs. Their data-driven approach ensures continuous optimization for maximum ROI, helping you focus on growing your business while they take care of the rest.
+      </p>
+    </div>
+    <div className="p-6 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold mb-2" style={{fontSize: "1.5rem"}}>
+      How can AI-powered digital marketing services help small businesses grow?
+      </h3>
+      <p className="text-gray-600" style={{fontSize: "1.5rem"}}>
+      AI-powered digital marketing services help small businesses by automating tasks, optimizing ad campaigns, personalizing customer interactions, and analyzing data for better decision-making. AI tools enhance SEO, content marketing, social media management, and email campaigns, making them more efficient and cost-effective. With AI-driven insights, small businesses can target the right audience, improve engagement, and maximize ROI, even with limited resources.
+      </p>
+    </div>
+    
+  </div>
+</section>
+         
+        
         {/* Contact Section */}
         <section ref={contactRef} className="animate-slide-in px-4 md:px-16 py-12 md:py-16 bg-white text-black">
             <Link to="/contact">
@@ -405,12 +475,7 @@ const approaches = [
   },
 ];
 
-const impacts = [
-  'https://images.unsplash.com/photo-1552581234-26160f608093',
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-  'https://images.unsplash.com/photo-1552664730-d307ca884978',
-  'https://images.unsplash.com/photo-1552581234-26160f608093',
-];
+
 
 const impactPoints = [
   'Increased Brand Visibility & Reach',

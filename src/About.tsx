@@ -24,6 +24,7 @@ const About = () => {
   const [logo , setLogo] = useState(blacklogo);
 
   return (
+    
     <div className="min-h-screen bg-white relative">
       {/* Navigation */}
       <Navbar/>
